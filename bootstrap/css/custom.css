@@ -1,0 +1,250 @@
+body{
+	padding: 50px 0;
+	/*overflow:hidden;*/
+	/*margin-right: -15px; 
+	margin-bottom: -15px; */
+}
+ /* for Chrome */
+}
+body::-webkit-scrollbar{
+	display: none;
+}
+.big-container{
+	overflow: auto;
+	height: 600;
+}
+
+.carousel{
+	height: 500px;
+	background-color: #000;
+	margin-bottom: 60px;
+}
+.carousel .item{
+	height: 500px;
+	background-color: #000;
+}
+.carousel img{
+	width: 100%;
+}
+.carousel-caption p{
+	margin-bottom: 20px;
+	font-size: 20px;
+	line-height: 1.8;
+}
+.img-circle{
+	height: 140px;
+	width: 140px;
+}
+#summary-container .col-md-4{
+	text-align: center;
+}
+hr{
+	margin:60px 0;
+}
+.feature{
+	padding: 30px 0;
+}
+.feature-heading{
+	font-size: 50px;
+	color: #2a6496;
+	margin-top: 120px;
+}
+.feature-heading .text-muted{
+	font-size:28px;
+	color: #999;
+}
+a{
+	text-decoration: none;
+}
+.tab-pane{
+	height: 500px;
+}
+#gotop{
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+}
+.navbar-my{
+	background: #fff;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+#meet-navbar font:hover{
+	border-bottom: 4px solid #E57D69;
+  	background-color: inherit;
+  	padding-bottom: 12px;
+}
+.col-center-block{
+    display: block; 
+    margin-left: 20%;  
+    margin-right: auto;
+}
+.col-center-block li a{
+	width: 100px;
+	text-align: center;
+	font-style: normal;
+    font-weight: 500;
+    font-size: 1.25em;
+}
+.header-bg-alt{
+	background-image: linear-gradient(-180deg, #F8F8EC 0%, #E2F6F9 100%);
+    background-size: 1200px 950px;
+    background-repeat: repeat;
+    color: #4e4e4e;
+    background-position: center;
+    height: 950px;
+}
+    
+.beader-bg-images{
+	background-image: url(../images/city-fg-day.svg), url(../images/city-bg-day.svg);
+    background-size: 1200px 950px;
+    background-repeat: no-repeat, no-repeat;
+    color: #4e4e4e;
+    background-position-x: center;
+    background-position-y: 70px;
+    height: 950px;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.head-line{
+	text-align: center;
+    max-width: 620px;
+    margin: 50px auto;
+}
+h1{
+	font-style: normal;
+    font-weight: 800;
+    font-size: 4.25em;
+}
+
+.lead{
+	font-size: 1.3em;
+    opacity: 0.6;
+    margin-top: 1.25em;
+    line-height: 1.75em;
+    font-style: normal;
+}
+.meet{
+	padding: 60px 0;
+    border-bottom: 2px solid rgba(86, 72, 70, 0.3);
+}
+
+.container {
+    display: block;
+    max-width: 960px;
+
+}
+.workers{
+	padding-top: 30px;
+}
+.workers a{
+	color: #E57D69;
+}
+.worker-name{
+	text-align: center;
+	margin-left: 0 auto;
+}
+
+.container-meet h2:after {
+    width: 100px;
+    margin-top: 0.45em;
+    margin-left: 20px;
+    height: 4px;
+    content: "";
+    position: absolute;
+    background-color: #E57D69;
+}
+h3{
+    font-style: normal;
+    font-weight: 800;
+    color: #E57D69;
+    font-size: 2.5em;
+}
+h3 a:hover{
+	text-decoration:none;
+}
+.meet-act{
+	background: #f9f9f9;
+}
+.meet img{
+	width: 450px;
+	height:370px;
+}
+.meet-act h3{
+	font-style: normal;
+    font-weight: 300;
+    font-size: 1.5em;
+}
+.meet-act p{
+	font-size: 1em;
+    color: #888888;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+.act{
+	margin-top: 50px;
+}
+.meet-time{
+	background-color:#E57D69;
+}
+.container-time h2{
+	color: #FFFFFF;
+}
+.container-time h2:after {
+    width: 100px;
+    margin-top: 0.45em;
+    margin-left: 20px;
+    height: 4px;
+    content: "";
+    position: absolute;
+    background-color: #3B3C3C;
+}
+.time{
+	padding: 40px 0;
+}
+
+.table > tbody > tr > th,.table > tbody > tr > td{
+	border-top: 1px solid rgba(101, 62, 54, 0.3);
+	margin: 10px 0;
+}
+.table>thead>tr>th{
+	border-bottom: 1px solid rgba(101, 62, 54, 0.3);
+}
+.table tbody tr:hover{
+	background-color: #C6CBCE;
+}
+.form-horizontal{
+	margin-top: 40px;
+}
+.meet-bao{
+	background: #f9f9f9;
+}
+.card {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    padding: 3rem;
+    background: white;
+}
+.text-center {
+    text-align: center;
+}
+.mb1\.25 {
+    margin-bottom: 1.25em;
+}
+.btn-primary {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    background-image: none;
+    border: 2px solid #772515;
+    background: #E57D69;
+    text-shadow: none;
+    font-size: 1.125em;
+    margin: 20px 0;
+}
+.card button:hover{
+	opacity:0.6;
+}
+#l-map{height:500px;width:100%;}
+.meet-pla{
+	background: #f9f9f9;
+}

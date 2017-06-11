@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>workmanship</title>
+		<link rel="stylesheet" type="text/css" href="css/css.php">
+		<link rel="stylesheet" type="text/css" href="css/uploadify.css">
+		<link rel="stylesheet" type="text/css" href="css/box.css">
+		<link rel="stylesheet" type="text/css" href="css/header_top.css">
+</head>
+<body>
+
+<div class="craft_homePopupWrap">
+	<div class="craft_homePopup">
+		<img class="craft_homePopupClose" src="./手艺网_files/homePopup_close.png">
+		<ul class="craft_homePopupNav">
+			<li class="active" data-url="http://muyi.91craft.com/index.php?app=public&amp;mod=Index&amp;act=homePopPub">我的发布</li>
+			<li data-url="http://muyi.91craft.com/index.php?app=public&amp;mod=Index&amp;act=homePopDeal">我的交易</li>
+			<li data-url="http://muyi.91craft.com/index.php?app=public&amp;mod=Index&amp;act=homePopFa">我的收藏</li>
+			<li class="homeSetBtn" data-url="http://muyi.91craft.com/index.php?app=public&amp;mod=Index&amp;act=homePopSet">我的设置</li>
+            <li data-url="http://muyi.91craft.com/index.php?app=public&amp;mod=Index&amp;act=homePopSite">收货地址</li>
+		</ul>
+
+		<div class="craft_homePopupContent">
+            <p class="homePopupLoading" style="position:absolute;z-index:2;top:0px;left:120px;height:100%;width:720px;text-align:center;line-height:600px;background:rgba(255,255,255,0.5);color:#fff;"><img style="vertical-align:inherit" src="./手艺网_files/loading.gif"></p>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(".craft_homePopupBtn").on("click",function(){
+		$(".craft_homePopupWrap").fadeIn(300)
+		$(".craft_homePopup").slideDown(300);
+		$(".craft_homePopupContent").load("http://muyi.91craft.com/index.php?app=public&mod=Index&act=homePopPub");
+		$(".craft_homePopupNav li").removeClass("active");
+		$(".craft_homePopupNav li").eq(0).addClass("active");
+		$("body").css("overflow","hidden")
+	});
+	$(".craft_homePopupClose").on("click",function(){
+		$(".craft_homePopup").slideUp(300);
+		$(".craft_homePopupWrap").fadeOut(300);
+		$("body").css("overflow","auto")
+	});
+	$(".craft_homePopupNav li").on("click",function(){
+		var _this=$(this);
+		$(".craft_homePopupNav li").removeClass("active");
+		$(this).addClass("active");
+		var url = $(this).data('url');
+		$(".craft_homePopupContent").load(url);
+		$(".craft_homePopupNav").append("<p class='homePopupLoading' style='position:absolute;z-index:2;top:0px;left:120px;height:100%;width:720px;text-align:center;line-height:600px;background:rgba(255,255,255,0.5);color:#fff;'><img style='vertical-align:inherit' src='http://muyi.91craft.com/addons/theme/stv1/_static/img/loading.gif' /></p>")
+		$(".craft_homePopupContent").load(url,function(){
+			if(!_this.hasClass("homeSetBtn")){
+				$(".craft_homePopup .homePopupLoading").remove();
+			}
+
+		});
+
+	});
+
+</script>
+<script type="text/javascript">
+//	$("#qq_contact li").mouseenter(function(){
+//		$(this).children().css("display","block");
+//	});
+//
+//	$("#qq_contact li").mouseleave(function(){
+//		$(this).children().css("display","none");
+//	})
+
+
+    //发布显示隐藏列表
+    $("#craft_release").hover(function(){
+                $(".craft_release_downList").css("display","block");
+            },function(){
+                $(".craft_release_downList").css("display","none");
+            }
+    );
+
+    //创建课程
+    $(function(){
+
+        $(".course-add-btn").click(function (){
+            if(!$("#uid").val()){
+                ui.success("请先登录");
+            }else{
+                // $('.clearfix.publish').show();
+                // $('.clearfix.publish').html("<iframe width='800px' height='640px' src='http://muyi.91craft.com/index.php?app=public&mod=Index&act=craftFbPop'></iframe>");
+                // $(".clearfix.publish").load("http://muyi.91craft.com/index.php?app=public&mod=Index&act=craftFbPop");
+                var $dlg = $("<div class='publish_cover'><div class='publish_dlg'></div></div>").appendTo($('body'));
+                $("<iframe src='http://muyi.91craft.com/index.php?app=public&mod=Index&act=craftFbPop'></iframe>").appendTo($('.publish_dlg'));
+				$('dd.craft_userWrap').css('z-index','900');
+            }
+        });
+    })
+
+    function closeFbDlg(){
+        $('.publish_cover').remove();
+		$('dd.craft_userWrap').css('z-index','1001');
+    }
+</script>
+
+<div id="body" style="background-color:#e5e5e5;margin-top:20px;min-width:1200px;">
+	<!-- 导航 -->
+	<div style="width:1200px;overflow:hidden;height:50px;margin-left:auto;margin-right:auto;">
+				<div style="width:200px;height:50px;background-color:#222;font-size:20px;font-family:微软雅黑;text-align:center;float:left;line-height:50px;">
+			<a href="http://muyi.91craft.com/" style="color:#fff;">木艺</a>
+		</div>
+				
+				<div style="width:199px;height:50px;background-color:#eb6100;font-size:20px;font-family:微软雅黑;text-align:center;float:left;line-height:50px;color:#fff;margin-left:1px;">
+			<a href="http://muyi.91craft.com/video/" style="color:#fff;">视频课程</a>
+		</div>
+				
+				
+		<div style="width:199px;height:50px;background-color:#222;font-size:20px;font-family:微软雅黑;text-align:center;float:left;line-height:50px;color:#fff;margin-left:1px;">
+			<a href="http://muyi.91craft.com/text/" style="color:#fff;">图文课程</a>
+		</div>
+				
+		<!-- 		
+		<div style="width:199px;height:50px;background-color:#222;font-size:20px;font-family:微软雅黑;text-align:center;float:left;line-height:50px;color:#fff;margin-left:1px;">
+			<a href="http://muyi.91craft.com/index.php?app=index&mod=Muyi&act=base" style="color:#fff;">基础课程</a>
+		</div>
+		-->
+		
+				
+		<div style="width:199px;height:50px;background-color:#222;font-size:20px;font-family:微软雅黑;text-align:center;float:left;line-height:50px;color:#fff;margin-left:1px;">
+			<a href="http://muyi.91craft.com/shop/" style="color:#fff;">市集</a>
+		</div>
+				
+				
+		<div style="width:199px;height:50px;background-color:#222;font-size:20px;font-family:微软雅黑;text-align:center;float:left;line-height:50px;color:#fff;margin-left:1px;">
+			<a href="http://muyi.91craft.com/quanzi/" style="color:#fff;">圈子</a>
+		</div>
+						
+		<div style="width:199px;height:50px;background-color:#222;font-size:20px;font-family:微软雅黑;text-align:center;float:left;line-height:50px;color:#fff;margin-left:1px;">
+			<a href="http://muyi.91craft.com/baseCourse/" style="color:#fff;">基础课程</a>
+		</div>
+			</div>
+	<!-- 课程 -->
+	<div style="width:1200px;min-height:500px;margin-left:auto;margin-right:auto;background-color:#fff;margin-bottom:20px;">
+							<div style="width:272px;height:250px;float:left;border:solid 1px #e6e6e6;margin-top:20px;margin-left:11px;">
+				<div style="width:272px;height:153px;">
+					<a href="http://muyi.91craft.com/course/1702.html" target="_blank">
+						<img src="./手艺网_files/1495876299270.png" style="width:270px;height:151px;margin:1px;">
+					</a>
+				</div>
+				<div style="width:252px;height:40px;line-height:40px;margin-left:10px;margin-right:10px;font-size:14px;font-family:微软雅黑;font-weight:bold;">
+					<a href="http://muyi.91craft.com/course/1702.html" target="_blank">大伟木艺分享课｜14凳子</a>
+				</div>
+				<div style="width:252px;line-height:20px;height:57px;margin-left:10px;margin-right:10px;font-size:12px;font-family:微软雅黑;">
+					<a href="http://muyi.91craft.com/course/1702.html" target="_blank" style="color:#595757;">做一把精致的凳子，安逸的坐着，亲近了世界，亲近了心灵。</a>
+				</div>
+			</div>
+						<div style="width:272px;height:250px;float:left;border:solid 1px #e6e6e6;margin-left:27px;margin-top:20px;">
+				<div style="width:272px;height:153px;">
+					<a href="http://muyi.91craft.com/course/1668.html" target="_blank">
+						<img src="./手艺网_files/1492152549167.jpg" style="width:270px;height:151px;margin:1px;">
+					</a>
+				</div>
+				<div style="width:252px;height:40px;line-height:40px;margin-left:10px;margin-right:10px;font-size:14px;font-family:微软雅黑;font-weight:bold;">
+					<a href="http://muyi.91craft.com/course/1668.html" target="_blank">大伟木艺分享课——13 书桌制</a>
+				</div>
+				<div style="width:252px;line-height:20px;height:57px;margin-left:10px;margin-right:10px;font-size:12px;font-family:微软雅黑;">
+					<a href="http://muyi.91craft.com/course/1668.html" target="_blank" style="color:#595757;">这一节课手艺工场体验师大伟老师来给我们分享书桌的制作。</a>
+				</div>
+			</div>
+						<div style="width:272px;height:250px;float:left;border:solid 1px #e6e6e6;margin-left:27px;margin-top:20px;">
+				<div style="width:272px;height:153px;">
+					<a href="http://muyi.91craft.com/course/1586.html" target="_blank">
+						<img src="./手艺网_files/1486200592696.jpg" style="width:270px;height:151px;margin:1px;">
+					</a>
+				</div>
+				<div style="width:252px;height:40px;line-height:40px;margin-left:10px;margin-right:10px;font-size:14px;font-family:微软雅黑;font-weight:bold;">
+					<a href="http://muyi.91craft.com/course/1586.html" target="_blank">木时光の鸡祥如意木刻画</a>
+				</div>
+				<div style="width:252px;line-height:20px;height:57px;margin-left:10px;margin-right:10px;font-size:12px;font-family:微软雅黑;">
+					<a href="http://muyi.91craft.com/course/1586.html" target="_blank" style="color:#595757;">你知道吗？公元年号除以12余数是1的年份，都是鸡年。2017÷12＝2016余1，所以我</a>
+				</div>
+			</div>
+						<div style="width:272px;height:250px;float:left;border:solid 1px #e6e6e6;margin-left:27px;margin-top:20px;">
+				<div style="width:272px;height:153px;">
+					<a href="http://muyi.91craft.com/course/1135.html" target="_blank">
+						<img src="./手艺网_files/1468039595253.jpg" style="width:270px;height:151px;margin:1px;">
+					</a>
+				</div>
+				<div style="width:252px;height:40px;line-height:40px;margin-left:10px;margin-right:10px;font-size:14px;font-family:微软雅黑;font-weight:bold;">
+					<a href="http://muyi.91craft.com/course/1135.html" target="_blank">孙悟空口金包制作教程</a>
+				</div>
+				<div style="width:252px;line-height:20px;height:57px;margin-left:10px;margin-right:10px;font-size:12px;font-family:微软雅黑;">
+					<a href="http://muyi.91craft.com/course/1135.html" target="_blank" style="color:#595757;">此课程主要介绍了奇异衬如何使用，一片式弧形抓脚做法（原创哦），无孔口金的上</a>
+				</div>
+			</div>
+						<div style="width:272px;height:250px;float:left;border:solid 1px #e6e6e6;margin-top:20px;margin-left:11px;">
+				<div style="width:272px;height:153px;">
+					<a href="http://muyi.91craft.com/course/895.html" target="_blank">
+						<img src="./手艺网_files/1460686156.jpg" style="width:270px;height:151px;margin:1px;">
+					</a>
+				</div>
+				<div style="width:252px;height:40px;line-height:40px;margin-left:10px;margin-right:10px;font-size:14px;font-family:微软雅黑;font-weight:bold;">
+					<a href="http://muyi.91craft.com/course/895.html" target="_blank">大蔡木艺分享课｜01清醒</a>
+				</div>
+				<div style="width:252px;line-height:20px;height:57px;margin-left:10px;margin-right:10px;font-size:12px;font-family:微软雅黑;">
+					<a href="http://muyi.91craft.com/course/895.html" target="_blank" style="color:#595757;">这是我对时间的理解，我给它取名叫清醒。7点钟起床的时候，我今天的时间还有17</a>
+				</div>
+			</div>
+						<div style="width:272px;height:250px;float:left;border:solid 1px #e6e6e6;margin-left:27px;margin-top:20px;">
+				<div style="width:272px;height:153px;">
+					<a href="http://muyi.91craft.com/course/893.html" target="_blank">
+						<img src="./手艺网_files/1460641697.jpg" style="width:270px;height:151px;margin:1px;">
+					</a>
+				</div>
+				<div style="width:252px;height:40px;line-height:40px;margin-left:10px;margin-right:10px;font-size:14px;font-family:微软雅黑;font-weight:bold;">
+					<a href="http://muyi.91craft.com/course/893.html" target="_blank">大伟木艺分享课｜12盒子</a>
+				</div>
+				<div style="width:252px;line-height:20px;height:57px;margin-left:10px;margin-right:10px;font-size:12px;font-family:微软雅黑;">
+					<a href="http://muyi.91craft.com/course/893.html" target="_blank" style="color:#595757;">本次木艺全部12节分享课到这里就全部结束了。就像在第1课谈心得的时候我说的，</a>
+				</div>
+			</div>
+						<div style="width:272px;height:250px;float:left;border:solid 1px #e6e6e6;margin-left:27px;margin-top:20px;">
+				<div style="width:272px;height:153px;">
+					<a href="http://muyi.91craft.com/course/892.html" target="_blank">
+						<img src="./手艺网_files/1460638891.jpg" style="width:270px;height:151px;margin:1px;">
+					</a>
+				</div>
+				<div style="width:252px;height:40px;line-height:40px;margin-left:10px;margin-right:10px;font-size:14px;font-family:微软雅黑;font-weight:bold;">
+					<a href="http://muyi.91craft.com/course/892.html" target="_blank">大伟木艺分享课｜11梳妆台</a>
+				</div>
+				<div style="width:252px;line-height:20px;height:57px;margin-left:10px;margin-right:10px;font-size:12px;font-family:微软雅黑;">
+					<a href="http://muyi.91craft.com/course/892.html" target="_blank" style="color:#595757;">这个梳妆台比较精致小巧，看上去就像一个简单的小书桌，其实里面另有玄机。它也</a>
+				</div>
+			</div>
+						<div style="width:272px;height:250px;float:left;border:solid 1px #e6e6e6;margin-left:27px;margin-top:20px;">
+				<div style="width:272px;height:153px;">
+					<a href="http://muyi.91craft.com/course/891.html" target="_blank">
+						<img src="./手艺网_files/1460637109.jpg" style="width:270px;height:151px;margin:1px;">
+					</a>
+				</div>
+				<div style="width:252px;height:40px;line-height:40px;margin-left:10px;margin-right:10px;font-size:14px;font-family:微软雅黑;font-weight:bold;">
+					<a href="http://muyi.91craft.com/course/891.html" target="_blank">大伟木艺分享课｜10单人书桌</a>
+				</div>
+				<div style="width:252px;line-height:20px;height:57px;margin-left:10px;margin-right:10px;font-size:12px;font-family:微软雅黑;">
+					<a href="http://muyi.91craft.com/course/891.html" target="_blank" style="color:#595757;">这个单人书桌是一个榫卯结构，第二层的隔书板和拦书板是一个亮点，它不仅起到置</a>
+				</div>
+			</div>
+						<div style="width:272px;height:250px;float:left;border:solid 1px #e6e6e6;margin-top:20px;margin-left:11px;">
+				<div style="width:272px;height:153px;">
+					<a href="http://muyi.91craft.com/course/890.html" target="_blank">
+						<img src="./手艺网_files/1460635647.jpg" style="width:270px;height:151px;margin:1px;">
+					</a>
+				</div>
+				<div style="width:252px;height:40px;line-height:40px;margin-left:10px;margin-right:10px;font-size:14px;font-family:微软雅黑;font-weight:bold;">
+					<a href="http://muyi.91craft.com/course/890.html" target="_blank">大伟木艺分享课｜03方料车圆</a>
+				</div>
+				<div style="width:252px;line-height:20px;height:57px;margin-left:10px;margin-right:10px;font-size:12px;font-family:微软雅黑;">
+					<a href="http://muyi.91craft.com/course/890.html" target="_blank" style="color:#595757;">方料车圆在木艺制作技法中，我觉得是让家具有了更多的设计变化，它是机器和手工</a>
+				</div>
+			</div>
+						<div style="width:272px;height:250px;float:left;border:solid 1px #e6e6e6;margin-left:27px;margin-top:20px;">
+				<div style="width:272px;height:153px;">
+					<a href="http://muyi.91craft.com/course/887.html" target="_blank">
+						<img src="./手艺网_files/1460558301.jpg" style="width:270px;height:151px;margin:1px;">
+					</a>
+				</div>
+				<div style="width:252px;height:40px;line-height:40px;margin-left:10px;margin-right:10px;font-size:14px;font-family:微软雅黑;font-weight:bold;">
+					<a href="http://muyi.91craft.com/course/887.html" target="_blank">大伟木艺分享课｜01心得</a>
+				</div>
+				<div style="width:252px;line-height:20px;height:57px;margin-left:10px;margin-right:10px;font-size:12px;font-family:微软雅黑;">
+					<a href="http://muyi.91craft.com/course/887.html" target="_blank" style="color:#595757;">人假如说是猴子变的，猴子它一生都生活在树上。很亲。每一根树很有亲密感。
+ 
+</a>
+				</div>
+			</div>
+						<div style="width:272px;height:250px;float:left;border:solid 1px #e6e6e6;margin-left:27px;margin-top:20px;">
+				<div style="width:272px;height:153px;">
+					<a href="http://muyi.91craft.com/course/885.html" target="_blank">
+						<img src="./手艺网_files/1460556911.jpg" style="width:270px;height:151px;margin:1px;">
+					</a>
+				</div>
+				<div style="width:252px;height:40px;line-height:40px;margin-left:10px;margin-right:10px;font-size:14px;font-family:微软雅黑;font-weight:bold;">
+					<a href="http://muyi.91craft.com/course/885.html" target="_blank">大伟木艺分享课｜07拼板</a>
+				</div>
+				<div style="width:252px;line-height:20px;height:57px;margin-left:10px;margin-right:10px;font-size:12px;font-family:微软雅黑;">
+					<a href="http://muyi.91craft.com/course/885.html" target="_blank" style="color:#595757;">拼板在木艺中是非常常用的技法。桌面、凳面、梳妆台等需要比较宽的面子的时候，</a>
+				</div>
+			</div>
+						<div style="width:272px;height:250px;float:left;border:solid 1px #e6e6e6;margin-left:27px;margin-top:20px;">
+				<div style="width:272px;height:153px;">
+					<a href="http://muyi.91craft.com/course/884.html" target="_blank">
+						<img src="./手艺网_files/1460555245.jpg" style="width:270px;height:151px;margin:1px;">
+					</a>
+				</div>
+				<div style="width:252px;height:40px;line-height:40px;margin-left:10px;margin-right:10px;font-size:14px;font-family:微软雅黑;font-weight:bold;">
+					<a href="http://muyi.91craft.com/course/884.html" target="_blank">大伟木艺分享课｜06车削凳子腿</a>
+				</div>
+				<div style="width:252px;line-height:20px;height:57px;margin-left:10px;margin-right:10px;font-size:12px;font-family:微软雅黑;">
+					<a href="http://muyi.91craft.com/course/884.html" target="_blank" style="color:#595757;">我是一根小榉木, 身上做满了标记,今天是个慌张日子。男神送我上车床，电动马达</a>
+				</div>
+			</div>
+						<div style="width:272px;height:250px;float:left;border:solid 1px #e6e6e6;margin-top:20px;margin-left:11px;">
+				<div style="width:272px;height:153px;">
+					<a href="http://muyi.91craft.com/course/874.html" target="_blank">
+						<img src="./手艺网_files/1460538697.jpg" style="width:270px;height:151px;margin:1px;">
+					</a>
+				</div>
+				<div style="width:252px;height:40px;line-height:40px;margin-left:10px;margin-right:10px;font-size:14px;font-family:微软雅黑;font-weight:bold;">
+					<a href="http://muyi.91craft.com/course/874.html" target="_blank">大伟木艺分享课｜04小树</a>
+				</div>
+				<div style="width:252px;line-height:20px;height:57px;margin-left:10px;margin-right:10px;font-size:12px;font-family:微软雅黑;">
+					<a href="http://muyi.91craft.com/course/874.html" target="_blank" style="color:#595757;">经过塑性、打磨一系列的精细加工，一片小小的树林就出现了。它带着丝丝灵气，可</a>
+				</div>
+			</div>
+						<div style="width:272px;height:250px;float:left;border:solid 1px #e6e6e6;margin-left:27px;margin-top:20px;">
+				<div style="width:272px;height:153px;">
+					<a href="http://muyi.91craft.com/course/852.html" target="_blank">
+						<img src="./手艺网_files/1460539066.jpg" style="width:270px;height:151px;margin:1px;">
+					</a>
+				</div>
+				<div style="width:252px;height:40px;line-height:40px;margin-left:10px;margin-right:10px;font-size:14px;font-family:微软雅黑;font-weight:bold;">
+					<a href="http://muyi.91craft.com/course/852.html" target="_blank">大伟木艺分享课｜02毛料处理</a>
+				</div>
+				<div style="width:252px;line-height:20px;height:57px;margin-left:10px;margin-right:10px;font-size:12px;font-family:微软雅黑;">
+					<a href="http://muyi.91craft.com/course/852.html" target="_blank" style="color:#595757;">这是木器制作的一点心得，从开始毛料的选择到最后打磨成型。每一步都是精工细活</a>
+				</div>
+			</div>
+						<div style="width:272px;height:250px;float:left;border:solid 1px #e6e6e6;margin-left:27px;margin-top:20px;">
+				<div style="width:272px;height:153px;">
+					<a href="http://muyi.91craft.com/course/832.html" target="_blank">
+						<img src="./手艺网_files/1460538762.jpg" style="width:270px;height:151px;margin:1px;">
+					</a>
+				</div>
+				<div style="width:252px;height:40px;line-height:40px;margin-left:10px;margin-right:10px;font-size:14px;font-family:微软雅黑;font-weight:bold;">
+					<a href="http://muyi.91craft.com/course/832.html" target="_blank">大伟木艺分享课｜09一把椅子</a>
+				</div>
+				<div style="width:252px;line-height:20px;height:57px;margin-left:10px;margin-right:10px;font-size:12px;font-family:微软雅黑;">
+					<a href="http://muyi.91craft.com/course/832.html" target="_blank" style="color:#595757;">生活中一把看似相貌平平的椅子，其实也可以精致到每个小小的弧度。这些小弧度，</a>
+				</div>
+			</div>
+						<div style="width:272px;height:250px;float:left;border:solid 1px #e6e6e6;margin-left:27px;margin-top:20px;">
+				<div style="width:272px;height:153px;">
+					<a href="http://muyi.91craft.com/course/767.html" target="_blank">
+						<img src="./手艺网_files/1460538789.jpg" style="width:270px;height:151px;margin:1px;">
+					</a>
+				</div>
+				<div style="width:252px;height:40px;line-height:40px;margin-left:10px;margin-right:10px;font-size:14px;font-family:微软雅黑;font-weight:bold;">
+					<a href="http://muyi.91craft.com/course/767.html" target="_blank">大伟木艺分享课｜05小汽车</a>
+				</div>
+				<div style="width:252px;line-height:20px;height:57px;margin-left:10px;margin-right:10px;font-size:12px;font-family:微软雅黑;">
+					<a href="http://muyi.91craft.com/course/767.html" target="_blank" style="color:#595757;">传说圣诞老人在每年圣诞节的时候，都会在小朋友睡着之后，悄悄的钻进烟囱，把木</a>
+				</div>
+			</div>
+						<div style="width:272px;height:250px;float:left;border:solid 1px #e6e6e6;margin-top:20px;margin-left:11px;">
+				<div style="width:272px;height:153px;">
+					<a href="http://muyi.91craft.com/course/721.html" target="_blank">
+						<img src="./手艺网_files/1465265263.jpg" style="width:270px;height:151px;margin:1px;">
+					</a>
+				</div>
+				<div style="width:252px;height:40px;line-height:40px;margin-left:10px;margin-right:10px;font-size:14px;font-family:微软雅黑;font-weight:bold;">
+					<a href="http://muyi.91craft.com/course/721.html" target="_blank">极简小木凳速成法</a>
+				</div>
+				<div style="width:252px;line-height:20px;height:57px;margin-left:10px;margin-right:10px;font-size:12px;font-family:微软雅黑;">
+					<a href="http://muyi.91craft.com/course/721.html" target="_blank" style="color:#595757;">人生就像一件作品，你惊叹于他的成就，他赞叹于我的成功，而我感知到你的伟大，</a>
+				</div>
+			</div>
+						<div style="width:272px;height:250px;float:left;border:solid 1px #e6e6e6;margin-left:27px;margin-top:20px;">
+				<div style="width:272px;height:153px;">
+					<a href="http://muyi.91craft.com/course/250.html" target="_blank">
+						<img src="./手艺网_files/1464139514.jpg" style="width:270px;height:151px;margin:1px;">
+					</a>
+				</div>
+				<div style="width:252px;height:40px;line-height:40px;margin-left:10px;margin-right:10px;font-size:14px;font-family:微软雅黑;font-weight:bold;">
+					<a href="http://muyi.91craft.com/course/250.html" target="_blank">旧桌新用，民国老家具翻新课</a>
+				</div>
+				<div style="width:252px;line-height:20px;height:57px;margin-left:10px;margin-right:10px;font-size:12px;font-family:微软雅黑;">
+					<a href="http://muyi.91craft.com/course/250.html" target="_blank" style="color:#595757;">民国时期的一件老家具，曾经被放在厅堂之上，供主人陈设各种物品，而今被抛弃在</a>
+				</div>
+			</div>
+					<div class="clear"></div>
+		<div id="page" class="page"></div>
+			</div>
+	
+</div>
+	
+
+	<!-- 统计代码 -->
+	<div id="site_analytics_code" style="display:none;"> <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256270474'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1256270474' type='text/javascript'%3E%3C/script%3E"));</script><span id="cnzz_stat_icon_1256270474"><a href="http://www.cnzz.com/stat/website.php?web_id=1256270474" target="_blank" title="站长统计">站长统计</a></span><script src="./手艺网_files/z_stat.php" type="text/javascript"></script><script src="./手艺网_files/core.php" charset="utf-8" type="text/javascript"></script> </div>
+	<script src="./手艺网_files/online_check.php"></script><script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+		bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+	} else{
+		bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	}
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4275a909b8c33fbd31993481d997b363";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+// 360自动收录
+(function(){
+   var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?0636b3054c8aba3f30de7d59c97a08ef":"https://jspassport.ssl.qhimg.com/11.0.1.js?0636b3054c8aba3f30de7d59c97a08ef";
+   document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+
+</script><script src="./手艺网_files/11.0.1.js" id="sozz"></script><script charset="utf-8" src="./手艺网_files/ab77b6ea7f3fbf79.js"></script>
+
+
+<div id="topcontrol" title="返回顶部" style="position: fixed; bottom: 89px; right: 20px; opacity: 0; cursor: pointer;"><a href="http://muyi.91craft.com/video/#top" class="top_stick">&nbsp;</a></div>
+
+
+<script type="text/javascript" src="js/hm.js"></script>
+<script type="text/javascript" src="js/push.js"></script>
+<script type="text/javascript" src="js/public_zh-cn.js"></script>
+<script type="text/javascript" src="js/w3g_zh-cn.js"></script>
+<script type="text/javascript" src="js/js.php"></script>
+<script type="text/javascript" src="js/core.comment.js"></script>
+<script type="text/javascript" src="js/core.digg.js"></script>
+<script type="text/javascript" src="js/qiniu.js"></script>
+<script type="text/javascript" src="js/jquery.uploadify.min.js"></script>
+<script type="text/javascript" src="js/plupload.full.min.js"></script>
+<script src="js/qiniu.js"></script>
+<script src="js/jquery.uploadify.min.js"></script>
+<script src="js/plupload.full.min.js"></script>
+
+</body></html>

@@ -1,0 +1,243 @@
+/*common*/
+body,ul,li,dl,dt,dd,p,h1,h2,h3,h4,h5,h6,i,em{padding: 0px;margin: 0px;list-style: none;font-style: normal;}
+body{font-family: "microsoft yahei", Helvetica, Tahoma, Arial, "Microsoft jhengHei", sans-serif;font-size: 14px;color: #333;}
+a{color: #333;text-decoration: none;}
+.publish .publish-wrap input,img,.publish .publish-wrap textarea{outline: none;border: 0;padding: 0px;}
+.craft_BGW{background-color: white !important;}
+.craft_FL{float: left !important;display: inline;}
+.craft_FR{float: right !important;display: inline;}
+.craft_OF{overflow: hidden;}
+.craft_ML0{margin-left: 0px !important;}
+.craft_MT90{margin-top: 90px;}
+.craft_FS18{font-size: 18px;}
+.craft_FS16{font-size: 16px;}
+.craft_FS20{font-size: 20px;}
+.craft_MT30{margin-top: 30px;}
+.craft_textOF{text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+.craft_clearfix{display: table;content: " ";clear: both;}
+.craft_borderBottom{border-bottom:1px solid #eee;}
+.craft_border{border: 1px solid #eee;}
+.craft_col4{width: 284px;margin-left: 21.3px;float: left;margin-bottom: 21.3px;display: inline;}
+.craft_col2{width: 589px;margin-left: 22px;float: left;display: inline;height: 335px;}
+.row2{margin-top: 22px;}
+.craft_rightSide{width: 280px;float: right;}
+.craft_leftSide{width: 898px;float: left;}
+.craft_FS20C3{font-size: 20px;color: #333 !important;}
+.craft_FS12Cc{font-size: 12px;color: #ccc;}
+.craft_borderR{background: url(../img/craft_dotted.jpg) repeat-y right;}
+.craft_active{color: orange;}
+/*commonEnd*/
+/*header*/
+.craft_loginRegisterBtn{margin:0px 4px 0px 10px;line-height: 44px;font-size:16px;}
+.craft_icon_1{background: url(../img/craft_icon_1.png) no-repeat center left;padding-left:50px;}
+.craft_icon_2{background: url(../img/craft_icon_2.png) no-repeat center left;padding-left:50px;}
+.craft_icon_3{background: url(../img/craft_icon_3.png) no-repeat center left;padding-left:50px;}
+.craft_icon_s1{background: url(../img/craft_icon_s1.png) no-repeat center left !important;padding-left:36px;}
+.craft_icon_s2{background: url(../img/craft_icon_s2.png) no-repeat center left;padding-left:36px;}
+.craft_icon_s3{background: url(../img/craft_icon_s3.png) no-repeat center left;padding-left:36px;}
+.craft_header{width: 1200px;margin: auto;padding-top: 20px;background: white;padding-bottom: 20px;}
+.craft_header dt,.craft_header dd{float: left;display: inline;}
+.craft_header dd{margin-left: 88px;padding-top: 30px;}
+.craft_header a:hover{color: #eb8c7a !important;}
+.craft_nav{font-size: 18px;}
+
+#qq_contact{top: 50%;margin-top: -100px;background-color: #e3e3e3;bottom: 336px;height: 364px;z-index: 998;}
+#topcontrol{top: 50%;margin-top:270px;z-index: 999;}
+/*#qq_contact img{width: auto;height: auto;position: absolute;bottom: 0px;left: -145px;display: none;cursor: auto;}*/
+#qq_contact .craft_contact3 div{position: absolute;bottom: 0px;left: -180px;background-color: #f1f1f1;padding: 10px;font-size: 12px;line-height: 18px;width: 160px;display: none;cursor: auto;}
+#qq_contact li{height: 48px;width: 48px;_width:48px;_height:48px;margin-bottom: 4px;position: relative;}
+#topcontrol .top_stick{height: 36px;width: 116px;background:url(../image/craft_backTop.png) no-repeat center center;_width:48px;_height:48px;background-color: #e3e3e3;transition: all ease-in-out 0.3s;}
+#topcontrol .top_stick:hover{opacity: 0.6;}
+/*#topcontrol .top_stick:hover,#qq_contact .craft_contact1:hover,#qq_contact .craft_contact2:hover,#qq_contact .craft_contact3:hover{background-position: -48px 0px;}*/
+#qq_contact .craft_contact1{background:url(../image/craft_weiChat.png) no-repeat left top;}
+#qq_contact .craft_contact2{background:url(../image/craft_APP.png) no-repeat left top;}
+#qq_contact .craft_contact3{background:url(../image/craft_contact.png) no-repeat left top;}
+
+#qq_contact li em{width: 50px;float: left;color: #333;background-color: #efefef;margin: 8px 0px;height: 28px;line-height: 28px;border-radius: 2px;cursor: pointer;}
+#qq_contact li p{clear: both;width: 100px;height: 100px;margin: auto;}
+#qq_contact li p img{width: 100%;height: 100%;}
+#qq_contact ul{width: 116px;}
+#qq_contact li{width: 100%;text-align: center;height: 144px;}
+#qq_contact a{font-size: 12px;width: 96px;margin: auto;display: block;line-height: 20px;color: #333;cursor: auto;}
+
+.craft_nav li{line-height: 44px;margin-left: 30px;height: 43px;float: left;display: inline;}
+.craft_nav li a{display: block;font-size: 18px;font-weight: normal;}
+.craft_search_wrap{position: relative;}
+#craft_search{border: 1px solid #ccc;height: 43px;display: block;width: 244px;text-indent: 16px;color: #666;height: 41px\9;line-height: 43px;margin-top: 0px;appearance: none;-moz-appearance: none;-webkit-appearance: none;}
+#craft_search_sub{display:block;margin:0px;padding:0px;position:absolute;opacity:0;filter:Alpha(opacity=0);z-index:-1;height: 0px;width: 0px;}
+.craft_search_sub{position: absolute;background: url(../img/craft_icon_search.png) no-repeat bottom left;height: 43px;width: 43px;right: 0px;top:30px;*top:32px;cursor: pointer;*height: 41px;}
+.craft_userWrap li{float: left;margin-left: 16px;cursor:pointer;display: inline;position: relative;}
+#craft_userName{width: 130px;line-height: 43px;font-size: 18px;}
+#craft_userName a{float: right;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;width: 100px;line-height: 46px;}
+.craft_userWrap ul {position: relative;width: 270px;}
+#craft_userName p a{display: block;line-height: 48px;font-size: 14px;text-align: center;color: #EB8C7A;background-color: #fafafa;width: 100px;}
+#craft_userName p{height: 0px;position: absolute;top: 50px;right: 0px;overflow: hidden;}
+#craft_userName img{display: inline;}
+
+#craft_release{position: relative;z-index: 1;}
+.craft_release_downList{position: absolute;left: 0px;top:43px;white-space: nowrap;background: white;*min-width: 140px;display: none;z-index: 2;}
+.craft_release_downList p{line-height: 58px;padding:0px 20px;}
+.craft_release_downList a{display: block;height: 58px;}
+#craft_info{position: relative;}
+.craft_infoNum{position:absolute;right: -5px;top:-5px;border-radius: 50%;background: #e83928;height: 18px;min-width: 18px;text-align: center;line-height: 18px;color: white;font-size: 12px;}
+/*headerEnd*/
+/*banner*/
+.craft_banner{width: 1200px;overflow: hidden;position: relative;height: 300px;margin: auto;}
+.craft_banner ul{overflow: hidden;position: absolute;top:0px;left: 0px;}
+.craft_banner li{float: left;display: inline;}
+.craft_banner p{position: absolute;top: 50%;margin-top:-76px;width: 100px;height: 200px;z-index: 1;cursor: pointer;background: url(../img/craft_opacity.png) repeat;}
+.craft_banner p img{margin-top: 74px;}
+.craft_banner .craft_prev img{margin-left: 50px;}
+.craft_banner .craft_next img{margin-left: 23px;}
+.craft_banner .craft_prev{left: 40px;}
+.craft_banner .craft_next{right: 40px;}
+.craft_banner_dotted i{float: left;height: 12px;width: 12px;background:rgba(255,255,255,0.5);border-radius: 6px;margin:0px 6px;background-image: url(../img/craft_opacity5.png)\9;cursor: pointer;display: inline;}
+.craft_banner_dotted i:first-child{background-color: white;}
+.craft_banner_dotted{position: absolute;bottom: 10px;left: 50%;}
+.craft_search_wrap .search-box li{line-height: 28px;border-bottom:1px solid #e5e5e5;padding: 0px 10px}
+.craft_search_wrap .search-box li:hover{background-color: #f0f0f0;}
+.craft_search_wrap .search-box{position: absolute;z-index: 2;background-color: #fff;border:1px solid #e5e5e5;margin:-1px 0px 0px 0px;width: 200px;}
+.craft_userWrap .dropmenu dd{margin-left: 0px;padding:0px 18px;}
+.craft_userWrap .dropmenu{position: absolute;z-index: 1001;background-color: #fff;display: none;left: -12px;width:120px;}
+
+/*headerEnd*/
+/*main*/
+
+/*学手工*/
+.craft_main_wrap{width: 1200px;margin: auto;}
+.craft_main_title{position: relative;padding-bottom: 58px;}
+.craft_main_title h1{font-weight: bold;font-size: 2em;}
+.craft_main_title div{position: absolute;top:0px;left: 496px;font-size: 18px;}
+.craft_main_title div a{margin: 20px 0px 0px 20px;background: #ffc16e;font-size: 14px;padding: 2px 4px;color: white;}
+.craft_main_learning .row1 div{height: 426px;position: relative;}
+.craft_main_learning .row1 div img{height: 100%;width: 100%;}
+.craft_main_learning .row1 div h3{font-size: 24px;margin-bottom: 10px;font-weight: 500;}
+.craft_main_learning .row1 div li a{color: white;}
+.craft_main_learning .row1 ul{position: absolute;bottom: 0px;text-align: center;width: 284px;background: url(../img/craft_opacityBlack5.png) repeat;color: white;padding: 10px 0px;}
+.craft_main_learning .row1 ul li{padding: 0px 10px;}
+.craft_main_learning .row1 dd{font-size: 14px;line-height: 34px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+.craft_main_learning .row1 dt{padding-bottom: 10px;}
+.craft_main_learning .row1 dl{background: url(../img/craft_col_solid.png) no-repeat right bottom;padding-right: 20px;height: 426px;}
+.craft_main_learning .row2{padding-top: 36px;}
+.craft_main_content .row1 .craft_col4:first-child{margin-left: 0px;}
+/*淘作品*/
+.craft_main_tao{}
+.craft_sketch_wrap{position: relative;}
+.craft_girlImg{position: absolute;right: 0px;bottom: 0px;width: 490px;height: 500px;}
+.craft_sketch_wrap h2{padding-left:50px;margin-bottom: 10px;}
+.craft_sketch_wrap p{padding-left:50px;width: 560px;line-height:26px;margin-bottom: 20px;}
+.craft_sketch_wrap ul{padding: 50px;overflow: hidden;background: #e8eadc;width: 1100px;}
+.craft_sketch_wrap li{float: left;margin-right: 18px;height: 148px;width: 148px;display: inline;}
+.craft_sketch_wrap li img{height: 100%;width: 100%;}
+.craft_main_tao .row1{padding-top: 36px;}
+.craft_main_tao .row1 .craft_col4{position: relative;}
+.craft_main_tao .row1 .craft_dingzhi{position: absolute;top: 0px;right: 0px;height: 71px !important;width: 71px !important;}
+/*聊手艺与发现*/
+.craft_main_exchange .row1 .craft_col2 img,.craft_main_vision .row1 .craft_col2 img{width: 100%;height: 100%;}
+.craft_main_exchange .row1 .craft_col2,.craft_main_vision .row1 .craft_col2{position: relative;}
+.craft_main_exchange .row1 .craft_col2 ul,.craft_main_vision .row1 .craft_col2 ul{position: absolute;width: 589px;bottom: 0px;left: 0px;background: url(../img/craft_opacityBlack5.png) repeat;color: white;padding: 14px 0px;}
+.craft_main_exchange .row1 .craft_col2 ul h2,.craft_main_vision .row1 .craft_col2 ul h2{margin-bottom: 8px;font-size: 20px;font-weight: 500;}
+.craft_main_exchange .row1 .craft_col2 ul li,.craft_main_vision .row1 .craft_col2 ul li{padding: 0px 10px;}
+.craft_main_exchange .row1 a,.craft_main_vision .row1 a{color: white;}
+
+/*楼上那三个可能共有的*/
+.craft_main_learning .row2 .craft_col4 dl,.craft_main_tao .row1 .craft_col4 dl,.craft_main_exchange .row2 .craft_col4 dl,.craft_main_vision .row2 .craft_col4 dl{padding: 18px;border:1px solid #eee;}
+.craft_main_learning .row2 .craft_col4 dt,.craft_main_exchange .row2 .craft_col4 dt,.craft_main_vision .row2 .craft_col4 dt{width: 246px;height: 140px;}
+.craft_main_tao .row1 .craft_col4 dt{width: 246px;height: 246px;}
+.craft_main_learning .row2 .craft_col4 dt img,.craft_main_tao .row1 .craft_col4 img,.craft_main_exchange .row2 .craft_col4 img,.craft_main_vision .row2 .craft_col4 img{height: 100%;width: 100%;}
+.craft_main_learning .row2 .craft_col4 dd h4,.craft_main_tao .row1 .craft_col4 dd h4,.craft_main_exchange .row2 .craft_col4 dd h4,.craft_main_vision .row2 .craft_col4 dd h4{font-weight: normal;font-size: 16px;}
+.craft_main_exchange .row2 .craft_col4 dd h4,.craft_main_vision .row2 .craft_col4 dd h4{font-weight: 500;font-size: 18px;}
+.craft_main_exchange .row2 .craft_col4 dd p,.craft_main_vision .row2 .craft_col4 dd p{line-height: 26px;height: 100px;overflow: hidden;color: #444;font-size: 12px;}
+.craft_main_learning .row2 .craft_col4 dd p,.craft_main_tao .row1 .craft_col4 dd p{float: left;width: 60%;color: #666;display: inline;}
+.craft_main_learning .row2 .craft_col4 dd span,.craft_main_tao .row1 .craft_col4 dd span{float: right;color: #EA5514;display: inline;}
+.craft_main_exchange .row2 .craft_col4 dd span i,.craft_main_vision .row2 .craft_col4 dd span i{padding-left: 20px;margin-right: 8px;color: #666666;font-size: 12px;}
+.craft_main_exchange .row2 .craft_col4 dd span,.craft_main_vision .row2 .craft_col4 dd span{padding-top: 20px;display: block;}
+.craft_main_learning .row2 .craft_col4 dd,.craft_main_tao .row1 .craft_col4 dd,.craft_main_exchange .row2 .craft_col4 dd,.craft_main_vision .row2 .craft_col4 dd{margin-top: 8px;}
+.craft_main_exchange .row2 .craft_col4,.craft_main_vision .row2 .craft_col4{margin-bottom: 32px;}
+.craft_iconEyes{background: url(../img/craft_icon_eyes.png) no-repeat left center;}
+.craft_iconComment{background: url(../img/craft_icon_comment.png) no-repeat left center;}
+.craft_iconThumb{background: url(../img/craft_icon_thumb.png) no-repeat left center;}
+
+/*footer*/
+.craft_footer{background: #474443;width: 100%;}
+.craft_footer_content{color: #9f9f9f;width: 1200px;margin: auto;padding: 26px 0px;height: 240px;}
+.craft_footer_content a{color: #9f9f9f}
+.craft_footer .craft_FL li{padding: 10px 0px;}
+.craft_footer .craft_FR dl{float: left;font-weight: bold;border-left: 1px solid #666;padding: 0px 20px;min-height: 186px;}
+.craft_footer .craft_FR dl dt{font-size: 16px;color:white;padding-bottom: 10px;}
+.craft_footer .craft_FR dl li{float: left;margin: 0px 6px;min-width: 90px;}
+.craft_footer .craft_FR dl ul{overflow: hidden;}
+.craft_footer .craft_FR dl dd{padding: 6px 0px;}
+
+.publish-wrap .field{position: relative;min-height: 40px;margin: 20px 0px;}
+.publish-wrap .field-input{max-width:650px;float: left;}
+.publish-wrap .field-input input[type='text']{border: 1px solid #ccc;line-height: 20px;padding:5px 5px;font-size: 14px;border-radius: 5px;width: 300px;}
+.publish-wrap .field-input textarea{border: 1px solid #ccc;line-height: 20px;padding:5px 5px;font-size: 14px;border-radius: 5px;width: 500px;height: 55px;}
+.publish-wrap #lesson_pic_toCourse{width: 72px !important;}
+.publish-wrap .field-input select{border: 1px solid #ccc;line-height: 30px;padding:5px 5px;font-size: 14px;border-radius: 5px;width: 150px;height: 30px;}
+.publish-wrap{}
+
+/*个人主页的弹窗*/
+
+.craft_homePopupWrap{height: 100%;width: 100%;background:url(../img/homePopup_opacity.png) repeat;position: fixed;top: 0px;left: 0px;z-index: 999;display: none;}
+.craft_homePopup{display: none;}
+.craft_homePopupWrap .craft_homePopup{height: 600px;width: 840px;background-color: white;position: absolute;top: 50%;margin-top: -300px;left: 50%;margin-left: -420px;}
+.craft_homePopupNav{width: 120px;height: 100%;background-color: #f8f9fb;float: left;position: relative;}
+
+.craft_homePopupNav li{text-align: center;font-size: 16px;color: #111;cursor: pointer;line-height: 50px;}
+.craft_homePopupNav li:first-child{margin-top: 10px;}
+.craft_homePopupNav .active{background-color: #efbf75;color: white;}
+.craft_homePopupContent{width: 660px;float:right;height: 100%;padding: 0px 30px 0px 20px;}
+.craft_homePopupClose{position: absolute;right: 14px;top: 20px;cursor:pointer;height: 14px;width: 14px;}
+.craft_homePopup_tabs ul{border-bottom: 1px solid #e3e3e3;overflow: hidden;}
+.craft_homePopup_tabs li{float: left;border-bottom: 2px solid #fff;margin: 10px 0px 0px 0px;padding: 10px 14px;font-size: 16px;cursor: pointer;}
+.craft_homePopup_tabs .active{border-color: #edbf72;}
+.craft_homePopupMain{padding: 20px 0px;overflow-y: auto;height: 500px;width: 677px;}
+.craft_homePopupMain .popup_tab_content{display: none;}
+.craft_Homedelete{cursor: pointer;}
+.craft_Homedelete_chat{cursor: pointer;}
+.craft_homePopupMain .craft_saveBtn{margin: auto;width: 100px;height: 30px;line-height: 30px;background-color: #efbf75;text-align: center;color: white;cursor: pointer;position: relative;margin-top: 30px;}
+.craft_homePopupMain .craft_saveBtn em{position: absolute;right: -230px;font-size: 12px;color: #eb6100 !important;cursor:auto;display: none;top: 0px;}
+
+.photo-layer div.photo-content{left: 50%;margin-left: -350px;padding-left: 0px !important;}
+.photo-layer a.close{right: 280px;}
+.craft_header dl dd.craft_userWrap{width: 266px;z-index: 2;position: relative;}
+.craft_header #craft_userName img{float: left;margin-top: 11px;}
+.craft_header #craft_userName{width: 126px;}
+.craft_header .craft_userWrap .dropmenu{top: 44px;}
+.clearfix.publish,#tsbox{z-index: 1002 !important;}
+.boxy-modal-blackout{z-index: 1001 !important;}
+#show_big_image .photo-layer .photo-content{width: 700px !important;}
+#show_big_image .photo-layer a.close{right: -15px;}
+#show_big_image #boxy_blackout,.craft_homePopupWrap,#show_big_image #photo_layer{z-index: 1001 !important;}
+.publish-wrap .publish-ofAuto{overflow-x: hidden;}
+.publish-wrap .publish-first #lesson_pic_img_toCourse{height:auto !important;width:auto !important;max-height: 400px;max-width: 500px;}
+
+
+.publish_cover {
+	z-index:999;
+	height: 100%;
+	width: 100%;
+	background: url(../image/course/publish-opacity.png) repeat;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+}
+
+.publish_dlg {
+	z-index:1000;
+	height: 661px;
+	width: 840px;
+	background: white;
+	position: relative;
+	top: 50%;margin-top: -330px;
+	left: 50%;
+	margin-left: -420px;
+}
+
+.publish_dlg iframe{
+	border : none !important;
+	width: 100%;
+	height: 700px;
+}

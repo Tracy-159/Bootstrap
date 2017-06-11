@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>activity</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/navbar.css">
+  <link rel="stylesheet" type="text/css" href="css/custom.css">
+</head>
+<body>
+   <!-- 导航条-->
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#demo-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="images/logored.png" class="img-responsive" alt="Responsive image">
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="demo-navbar">
+          <ul class="nav navbar-nav">
+            <li class="dropdown active">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">手艺<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#tab-paper">剪纸</a></li>
+                <li><a href="#tab-pottery">陶艺</a></li>
+                <li><a href="#tab-diao">雕刻</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">更多</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">表演<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">戏剧</a></li>
+                <li><a href="#">皮影戏</a></li>
+                <li><a href="#">曲艺</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">更多</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">展览<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">刺绣</a></li>
+                <li><a href="#">瓷器</a></li>
+                <li><a href="#">蚕桑丝织</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">更多</a></li>
+              </ul>
+            </li>
+            <li><a href="#"  data-toggle="modal" data-target="#about">关于</a></li>
+          </ul>
+          <form class="navbar-form navbar-left navbar-right">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">搜索</button>
+          </form>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div class="inner-container">
+       <!-- 轮播-->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+     <!-- 点 -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+     <!-- 图片 -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="images/clay figure1.jpg" alt="0 slide">
+          <div class="carousel-caption">
+           aaaaa
+         </div>
+        </div>
+        <div class="item">
+          <img src="images/clay figure3.jpg" alt="1 slide">
+          <div class="carousel-caption">
+           bbbbbbb
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/diao6.jpg" alt="2 slide">
+          <div class="carousel-caption">
+           ccccccc
+          </div>
+        </div>
+      </div>
+
+     <!-- 翻页 -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">上一页</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">下一页</span>
+      </a>
+    </div>
+
+    <!--三列栅格-->
+    <div class="container" id="summary-container">
+      <div class="row">
+        <div class="col-md-4">
+          <img class="img-circle" src="./images/hand_easyicon.png" alt="Generic placeholder image">
+          <h2>学手艺</h2>
+          <p>自己动手制作，更有现实意义</p>
+          <p><a class="btn btn-default" href="work.html" role="button">点击进入 &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <img class="img-circle" src="./images/ear_easyicon.png" alt="Generic placeholder image">
+          <h2>听表演</h2>
+          <p>聆听表演艺术，感受匠人精神</p>
+          <p><a class="btn btn-default" href="#" role="button">点击进入 &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <img class="img-circle" src="./images/eye_easyicon.png" alt="Generic placeholder image">
+          <h2>看展览</h2>
+          <p>观看工艺展览，体会中华文化</p>
+          <p><a class="btn btn-default" href="#" role="button">点击进入 &raquo;</a></p>
+        </div>
+      </div>
+      <hr id="posi" name="posi" class="divider">
+  
+      <!-- 标签页 -->
+      <ul class="nav nav-tabs" role="tablist" id="tab-list">
+        <li role="presentation" class="active"><a href="#tab-paper" url="activity_detail.html" aria-controls="home" role="tab" data-toggle="tab">剪纸</a></li>
+        <li role="presentation"><a href="#tab-pottery" aria-controls="profile" role="tab" data-toggle="tab">陶艺</a></li>
+        <li role="presentation"><a href="#tab-diao" aria-controls="messages" role="tab" data-toggle="tab">雕刻</a></li>
+      </ul>
+     <!-- 内容 -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="tab-paper">
+          <div class="row feature">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">
+                <span class="text-muted">动手裁剪，现场教学</span>
+              </h2>
+              <p class="lead">教你用折叠、剪刀、手撕等方式让单色彩色的纸片在手中活起来，它们可以装点你的门窗、礼品、嫁妆呢，快快行动起来吧</p>
+              <p class="lead">时间：2017年5月1日</p>
+              <p class="lead">地点：江西省南昌市</p>
+              <p><a class="btn btn-primary btn-lg" href="activity_detail.html" role="button">立即报名 &raquo;</a></p>
+            </div>
+            <div class="col-md-5">
+              <img class="feature-image img-responsive" src="images/paper1.jpg" alt="paper">
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tab-pottery">
+          <div class="row feature">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">
+                <span class="text-muted">最受欢迎的休闲方式</span>
+              </h2>
+              <p class="lead">约三五好友，亲手制作属于自己的陶制品，留下美好印记。提高生活品味、展现个人审美、增加艺术情调、装点生活环境。</p>
+              <p class="lead">时间：2017年7月20日</p>
+              <p class="lead">地点：师大南路彩陶馆</p>
+              <p><a class="btn btn-primary btn-lg" href="#" role="button">立即报名 &raquo;</a></p>
+            </div>
+            <div class="col-md-5">
+              <img class="feature-image img-responsive" src="images/pottery1.jpg" alt="pottery">
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tab-diao">
+          <div class="row feature">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">
+                <span class="text-muted">一次展现细心耐心的雕刻</span>
+              </h2>
+              <p class="lead">
+                用不同材质创造出你想要的可视、可触的艺术，独一无二，只此一份，用来送人最能表达诚意哦
+              </p>
+              <p class="lead">时间：2017年6月16日</p>
+              <p class="lead">地点：南昌市</p>
+              <p><a class="btn btn-primary btn-lg" href="#" role="button">立即报名 &raquo;</a></p>
+            </div>
+          <div class="col-md-5">
+            <img class="feature-image img-responsive" src="images/diao1.jpg" alt="diao">
+          </div>
+        </div>
+      </div>
+    
+      <hr class="divider">
+      <footer>
+        <p class="pull-right"><a id="gotop" href="#top"><img style="width: 50px;height: 50px;" src="images/top.png"></a></p>
+        <p>© 2016 Company, 匠心.</p>
+      </footer>
+    </div>
+
+    <!--关于的弹出框-->
+    <div class="modal fade" tabindex="-1" role="dialog" id="about">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">关于</h4>
+          </div>
+          <div class="modal-body">
+            <p>“匠心”是一款以文化传承为出发点，致力于挽回传统工艺产业面临的颓势，服务大众，传播快乐，回归传统，倡导体验生活本质的综合性平台。</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">好的</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    </div>
+
+ 
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/custom.js"></script>
+
+</body>
+</html>

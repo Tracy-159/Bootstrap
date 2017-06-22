@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>收货地址</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/amazeui.css" rel="stylesheet">
+	<link href="css/header-nav.css" rel="stylesheet">
+	<link href="css/personindex.css" rel="stylesheet" type="text/css">
+	<link href="css/addstyle.css" rel="stylesheet" type="text/css">
+	<link href="css/font-awesome.css" rel="stylesheet">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/PCASClass.js"></script>
+</head>
+<body>
+	<!-- Header --> 	
+	<div class="masthead clearfix" style="z-index: 1;">
+		<div class="inner">
+			<img class="main-icon" src="images/jx_48x48.ico">
+			<h1 class="masthead-brand">匠心</h1>
+			<ul class="nav masthead-nav">
+				<li><a href="index.html">主页</a></li>
+				<li><a href="#">匠人</a></li>
+				<li><a href="#">视频</a></li>
+				<li class="active"><a href="#">匠铺</a></li>
+				<!-- Small modal -->
+				<li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login-modal">登录</button></li>
+				<li><button type="button" class="btn btn-success" data-toggle="modal" data-target="#register-modal">注册</button></li>
+				<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<!-- 模态框里面的内容 -->
+							<div class="login-box" id="login-box">
+								<div class="login-container" style="width: inherit;">
+									<form class="form-signin">
+										<h2 class="form-signin-heading">登录</h2>
+										<label for="inputEmail" class="sr-only">用户名</label>
+										<input type="text" id="inputusername" class="form-control" placeholder="手机号/Email" required autofocus>
+										<label for="inputPassword" class="sr-only">密码</label>
+										<input type="password" id="inputPassword" class="form-control" placeholder="请输入密码" required>
+										<div class="checkbox">
+											<label class="remember-me">
+												<input type="checkbox" value="remember-me"> 记住我
+											</label>
+										</div>
+										<button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+									</form>
+								</div> 
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
+								<ul id="myTabs" class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="active" id="tab-text-regi"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true" style="color: #000;">短信注册</a></li>
+									<li role="presentation" class="" id="tab-email-regi"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false" style="color: #000;">邮箱注册</a></li>
+								</ul>
+								<div id="myTabContent" class="tab-content">
+									<div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+										<div class="register-box" id="text-register-box">
+											<div class="register-container" style="width: inherit;">
+												<form class="form-signin">
+													<h2 class="form-signin-heading">短信注册</h2>
+													<label for="inputText" class="sr-only">手机号</label>
+													<input type="text" id="inputText" class="form-control" placeholder="请输入手机号" required autofocus>
+													<br>
+													<label for="inputPassword" class="sr-only">验证码</label>
+													<input type="text" id="inputverify" class="form-control" placeholder="验证码" required>
+													<a href="#" class="btn btn-sm btn-info" id="btn-getverify">获取验证码</a>
+													<button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+												</form>
+											</div> 
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+										<div class="register-box" id="email-register-box">
+											<div class="register-container" style="width: inherit;">
+												<form class="form-signin">
+													<h2 class="form-signin-heading">Email注册</h2>
+													<label for="inputEmail" class="sr-only">Email</label>
+													<input type="email" id="inputEmail" class="form-control" placeholder="Email地址" required autofocus>
+													<br>
+													<input type="password" id="newPassword" class="form-control" placeholder="密码" required autofocus>
+													<br>
+													<input type="password" id="RetypePassword" class="form-control" placeholder="确认密码" required autofocus>
+													<br>
+													<button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+												</form>
+											</div> 
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 内容 -->
+	<div class="center">
+		<div class="col-main">
+			<div class="main-wrap">
+
+					<div class="user-address">
+						<!--标题 -->
+						<div class="am-cf am-padding">
+							<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">地址管理</strong> / <small>Address&nbsp;list</small></div>
+						</div>
+						<hr/>
+						<ul class="am-avg-sm-1 am-avg-md-3 am-thumbnails">
+
+							<li class="user-addresslist defaultAddr">
+								<span class="new-option-r"><i class="am-icon-check-circle"></i>默认地址</span>
+								<p class="new-tit new-p-re">
+									<span class="new-txt">桂乐</span>
+									<span class="new-txt-rd2">159****1622</span>
+								</p>
+								<div class="new-mu_l2a new-p-re">
+									<p class="new-mu_l2cw">
+										<span class="title">地址：</span>
+										<span class="province">江西</span>省
+										<span class="city">南昌</span>市
+										<span class="dist">青山湖</span>区
+										<span class="street">紫阳大道99号(江西师范大学)</span></p>
+								</div>
+								<div class="new-addr-btn">
+									<a href="#"><i class="am-icon-edit"></i>编辑</a>
+									<span class="new-addr-bar">|</span>
+									<a href="javascript:void(0);" onclick="delClick(this);"><i class="am-icon-trash"></i>删除</a>
+								</div>
+							</li>
+							<li class="user-addresslist">
+								<span class="new-option-r"><i class="am-icon-check-circle"></i>默认地址</span>
+								<p class="new-tit new-p-re">
+									<span class="new-txt">桂乐</span>
+									<span class="new-txt-rd2">159****1622</span>
+								</p>
+								<div class="new-mu_l2a new-p-re">
+									<p class="new-mu_l2cw">
+										<span class="title">地址：</span>
+										<span class="province">江西</span>省
+										<span class="city">南昌</span>市
+										<span class="dist">青山湖</span>区
+										<span class="street">紫阳大道99号(江西师范大学)</span></p>
+								</div>
+								<div class="new-addr-btn">
+									<a href="#"><i class="am-icon-edit"></i>编辑</a>
+									<span class="new-addr-bar">|</span>
+									<a href="javascript:void(0);" onclick="delClick(this);"><i class="am-icon-trash"></i>删除</a>
+								</div>
+							</li>
+						</ul>
+						<div class="clear"></div>
+						<a class="new-abtn-type" data-am-modal="{target: '#doc-modal-1', closeViaDimmer: 0}">添加新地址</a>
+						<!--例子-->
+						<div class="am-modal am-modal-no-btn" id="doc-modal-1">
+
+							<div class="add-dress">
+
+								<!--标题 -->
+								<div class="am-cf am-padding">
+									<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">新增地址</strong> / <small>Add&nbsp;address</small></div>
+								</div>
+								<hr/>
+
+								<div class="am-u-md-12 am-u-lg-8" style="margin-top: 20px;">
+									<form class="am-form am-form-horizontal">
+
+										<div class="am-form-group">
+											<label for="user-name" class="am-form-label">收货人</label>
+											<div class="am-form-content">
+												<input type="text" id="user-name" placeholder="收货人">
+											</div>
+										</div>
+
+										<div class="am-form-group">
+											<label for="user-phone" class="am-form-label">手机号码</label>
+											<div class="am-form-content">
+												<input id="user-phone" placeholder="手机号必填" type="email">
+											</div>
+										</div>
+										<div class="am-form-group">
+											<label for="user-address" class="am-form-label">所在地</label>
+											<div class="am-form-content address">
+												<select data-am-selected="{maxHeight: 200}" name="province">
+													<!-- <option value="a">江西省</option>
+													<option value="b" selected>湖北省</option> -->
+												</select>
+												<select data-am-selected="{maxHeight: 200}" name="city">
+													<!-- <option value="a">南昌市</option>
+													<option value="b" selected>武汉市</option> -->
+												</select>
+												<select data-am-selected="{maxHeight: 200}" name="area">
+													<!-- <option value="a">东湖区</option>
+													<option value="b" selected>洪山区</option> -->
+												</select>
+											</div>
+										</div>
+
+										<div class="am-form-group">
+											<label for="user-intro" class="am-form-label">详细地址</label>
+											<div class="am-form-content">
+												<textarea class="" rows="3" id="user-intro" placeholder="输入详细地址"></textarea>
+												<small>100字以内写出你的详细地址...</small>
+											</div>
+										</div>
+
+										<div class="am-form-group">
+											<div class="am-u-sm-9 am-u-sm-push-3">
+												<a class="am-btn am-btn-danger">保存</a>
+												<a href="javascript: void(0)" class="am-close am-btn am-btn-danger" data-am-modal-close>取消</a>
+											</div>
+										</div>
+									</form>
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<script type="text/javascript">
+						new PCAS("province","city","area","江西省","南昌市","青山湖区");
+
+						$(document).ready(function() {							
+							$(".new-option-r").click(function() {
+								$(this).parent('.user-addresslist').addClass("defaultAddr").siblings().removeClass("defaultAddr");
+							});
+							
+							var $ww = $(window).width();
+							if($ww>640) {
+								$("#doc-modal-1").removeClass("am-modal am-modal-no-btn")
+							}
+							
+						})
+					</script>
+
+					<div class="clear"></div>
+
+				</div>
+			
+
+		</div>
+
+		<aside class="menu">
+			<ul>
+				<li class="person active">
+					<a href="index.html">个人中心</a>
+				</li>
+				<li class="person">
+					<a href="#">个人资料</a>
+					<ul>
+						<li> <a href="information.html">个人信息</a></li>
+						<li> <a href="address.html">收货地址</a></li>
+					</ul>
+				</li>
+				<li class="person">
+					<a href="#">我的交易</a>
+					<ul>
+						<li><a href="order.html">订单管理</a></li>
+					</ul>
+				</li>
+			</ul>
+
+		</aside>
+	</div>
+	<!-- 清除浮动 -->
+	<div class="am-cf"></div>
+	<!-- 或者<div style="clear:both;"></div> -->
+	<!-- footer -->
+	<div class="mastfoot">
+		<div class="inner">
+			<p>CopyRight by @<a href="index.html">jiangxin</a>, by @gwj.</p>
+		</div>
+	</div>
+	<!-- 回到顶部 -->
+	<div data-am-widget="gotop" class="am-gotop am-gotop-fixed" style="width: 100px;height: 100px;right: 60px;">
+		<a href="#top" title="回到顶部" class="am-icon-btn am-icon-arrow-up am-active" id="amz-go-top"></a>
+	</div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/amazeui.min.js"></script>
+</body>
+</html>

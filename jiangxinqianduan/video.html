@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>视频</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/video.css" rel="stylesheet">
+	<link href="css/amazeui.css" rel="stylesheet">
+	<link href="css/header-nav.css" rel="stylesheet">
+	<link href="css/video-js.css" rel="stylesheet"> 
+	
+
+	<!-- If you'd like to support IE8 -->
+	<script src="js/videojs-ie8.min.js"></script>
+	
+</head>
+<body>
+	<!-- Header --> 	
+	<div class="masthead clearfix" style="z-index: 1;">
+		<div class="inner">
+			<img class="main-icon" src="images/jx_48x48.ico">
+			<h1 class="masthead-brand">匠心</h1>
+			<ul class="nav masthead-nav">
+				<li><a href="index.html">主页</a></li>
+				<li><a href="#">匠人</a></li>
+				<li class="active"><a href="#">视频</a></li>
+				<li><a href="#">匠铺</a></li>
+				<!-- Small modal -->
+				<li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login-modal">登录</button></li>
+				<li><button type="button" class="btn btn-success" data-toggle="modal" data-target="#register-modal">注册</button></li>
+				<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<!-- 模态框里面的内容 -->
+							<div class="login-box" id="login-box">
+								<div class="login-container" style="width: inherit;">
+									<form class="form-signin">
+										<h2 class="form-signin-heading">登录</h2>
+										<label for="inputEmail" class="sr-only">用户名</label>
+										<input type="text" id="inputusername" class="form-control" placeholder="手机号/Email" required autofocus>
+										<label for="inputPassword" class="sr-only">密码</label>
+										<input type="password" id="inputPassword" class="form-control" placeholder="请输入密码" required>
+										<div class="checkbox">
+											<label class="remember-me">
+												<input type="checkbox" value="remember-me"> 记住我
+											</label>
+										</div>
+										<button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+									</form>
+								</div> 
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
+								<ul id="myTabs" class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="active" id="tab-text-regi"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true" style="color: #000;">短信注册</a></li>
+									<li role="presentation" class="" id="tab-email-regi"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false" style="color: #000;">邮箱注册</a></li>
+								</ul>
+								<div id="myTabContent" class="tab-content">
+									<div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+										<div class="register-box" id="text-register-box">
+											<div class="register-container" style="width: inherit;">
+												<form class="form-signin">
+													<h2 class="form-signin-heading">短信注册</h2>
+													<label for="inputText" class="sr-only">手机号</label>
+													<input type="text" id="inputText" class="form-control" placeholder="请输入手机号" required autofocus>
+													<br>
+													<label for="inputPassword" class="sr-only">验证码</label>
+													<input type="text" id="inputverify" class="form-control" placeholder="验证码" required>
+													<a href="#" class="btn btn-sm btn-info" id="btn-getverify">获取验证码</a>
+													<button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+												</form>
+											</div> 
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+										<div class="register-box" id="email-register-box">
+											<div class="register-container" style="width: inherit;">
+												<form class="form-signin">
+													<h2 class="form-signin-heading">Email注册</h2>
+													<label for="inputEmail" class="sr-only">Email</label>
+													<input type="email" id="inputEmail" class="form-control" placeholder="Email地址" required autofocus>
+													<br>
+													<input type="password" id="newPassword" class="form-control" placeholder="密码" required autofocus>
+													<br>
+													<input type="password" id="RetypePassword" class="form-control" placeholder="确认密码" required autofocus>
+													<br>
+													<button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+												</form>
+											</div> 
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</ul>
+		</div>
+	</div>
+	<!-- 内容 -->
+	<div class="containner">
+		<div class="video">
+			<video id="my-video" class="video-js" controls preload="auto" width="1000" height="500"
+			poster="posters/vivi.png" data-setup="{}">
+			<source src="videos/oceans.mp4" type="video/mp4">
+				<source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+					<source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+						<p class="vjs-no-js">
+							To view this video please enable JavaScript, and consider upgrading to a web browser that
+							<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+						</p>
+					</video>
+					<script src="http://vjs.zencdn.net/5.18.4/video.min.js"></script>	
+					<script type="text/javascript">
+						var myPlayer = videojs('my-video');
+						videojs("my-video").ready(function(){
+							var myPlayer = this;
+							myPlayer.width($(".video").width());
+							myPlayer.height($(".video").height());
+				//myPlayer.play();
+			});
+		</script>
+	</div>
+	<div class="catalog">
+		<p><a href="#">video1</a></p>
+		<p><a href="#">video2</a></p>
+		<p><a href="#">video3</a></p>
+		<p><a href="#">video4</a></p>
+		<p><a href="#">video5</a></p>
+		<p><a href="#">video6</a></p>
+		<p><a href="#">video1</a></p>
+		<p><a href="#">video2</a></p>
+		<p><a href="#">video3</a></p>
+		<p><a href="#">video4</a></p>
+		<p><a href="#">video5</a></p>
+		<p><a href="#">video6</a></p>
+		<p><a href="#">video1</a></p>
+		<p><a href="#">video2</a></p>
+		<p><a href="#">video3</a></p>
+		<p><a href="#">video4</a></p>
+		<p><a href="#">video5</a></p>
+		<p><a href="#">video6</a></p>
+		<p><a href="#">video1</a></p>
+		<p><a href="#">video2</a></p>
+		<p><a href="#">video3</a></p>
+		<p><a href="#">video4</a></p>
+		<p><a href="#">video5</a></p>
+	</div>
+	<div style="clear:both;"></div>
+</div>
+
+
+ <hr class="featurette-divider">
+
+<!-- 介绍主体 -->
+<div class="below-container">
+	<div class="am-tabs" data-am-tabs>
+		<ul class="am-tabs-nav am-nav am-nav-tabs">
+			<li class="am-active"><a href="#tab1">详情</a></li>
+			<li><a href="#tab2">评论</a></li>
+		</ul>
+
+		<div class="am-tabs-bd am-tabs-bd-ofv">
+			<div class="am-tab-panel am-fade am-in am-active" id="tab1">
+				<h4 class="am-article-title">剪纸</h4>
+				<p>
+					中国剪纸是一种用剪刀或刻刀在纸上剪刻花纹，用于装点生活或配合其他民俗活动的民间艺术。在中国，剪纸具有广泛的群众基础，交融于各族人民的社会生活，是各种民俗活动的重要组成部分。其传承赓续的视觉形象和造型格式，蕴涵了丰富的文化历史信息，表达了广大民众的社会认以、道德观念、实践经验、生活理想和审美情趣，具有认知、教化、表意、抒情、娱乐、交往等多重社会价值  。
+					2006年5月20日，剪纸艺术遗产经国务院批准列入第一批国家级非物质文化遗产名录 。2009年9月28日至10月2日举行的联合国教科文组织保护非物质文化遗产政府间委员会第四次会议上，中国申报的中国剪纸项目入选“人类非物质文化遗产代表作名录”  。
+				</p>
+				<img src="images/剪纸1.jpg" class="am-img-responsive" alt=""/>
+				<p>
+					中国剪纸是一种用剪刀或刻刀在纸上剪刻花纹，用于装点生活或配合其他民俗活动的民间艺术。在中国，剪纸具有广泛的群众基础，交融于各族人民的社会生活，是各种民俗活动的重要组成部分。其传承赓续的视觉形象和造型格式，蕴涵了丰富的文化历史信息，表达了广大民众的社会认以、道德观念、实践经验、生活理想和审美情趣，具有认知、教化、表意、抒情、娱乐、交往等多重社会价值  。
+					
+				</p>
+				<img src="images/剪纸2.jpg" class="am-img-responsive" alt=""/>
+				<p>
+					中国剪纸是一种用剪刀或刻刀在纸上剪刻花纹，用于装点生活或配合其他民俗活动的民间艺术。在中国，剪纸具有广泛的群众基础，交融于各族人民的社会生活，是各种民俗活动的重要组成部分。其传承赓续的视觉形象和造型格式，蕴涵了丰富的文化历史信息，表达了广大民众的社会认以、道德观念、实践经验、生活理想和审美情趣，具有认知、教化、表意、抒情、娱乐、交往等多重社会价值  。
+					2006年5月20日，剪纸艺术遗产经国务院批准列入第一批国家级非物质文化遗产名录 。2009年9月28日至10月2日举行的联合国教科文组织保护非物质文化遗产政府间委员会第四次会议上，中国申报的中国剪纸项目入选“人类非物质文化遗产代表作名录”  。
+				</p>
+				<img src="images/剪纸3.jpg" class="am-img-responsive" alt=""/>
+				<p>
+					中国剪纸是一种用剪刀或刻刀在纸上剪刻花纹，用于装点生活或配合其他民俗活动的民间艺术。在中国，剪纸具有广泛的群众基础，交融于各族人民的社会生活，是各种民俗活动的重要组成部分。其传承赓续的视觉形象和造型格式，蕴涵了丰富的文化历史信息，表达了广大民众的社会认以、道德观念、实践经验、生活理想和审美情趣，具有认知、教化、表意、抒情、娱乐、交往等多重社会价值  。
+					
+				</p>
+				<img src="images/剪纸4.jpg" class="am-img-responsive" alt=""/>
+				<p>
+					中国剪纸是一种用剪刀或刻刀在纸上剪刻花纹，用于装点生活或配合其他民俗活动的民间艺术。在中国，剪纸具有广泛的群众基础，交融于各族人民的社会生活，是各种民俗活动的重要组成部分。其传承赓续的视觉形象和造型格式，蕴涵了丰富的文化历史信息，表达了广大民众的社会认以、道德观念、实践经验、生活理想和审美情趣，具有认知、教化、表意、抒情、娱乐、交往等多重社会价值  。
+					2006年5月20日，剪纸艺术遗产经国务院批准列入第一批国家级非物质文化遗产名录 。2009年9月28日至10月2日举行的联合国教科文组织保护非物质文化遗产政府间委员会第四次会议上，中国申报的中国剪纸项目入选“人类非物质文化遗产代表作名录”  。
+				</p>
+				
+				<img src="images/bw-2014-06-19.jpg" class="am-img-responsive" alt=""/>
+				<p>
+					中国剪纸是一种用剪刀或刻刀在纸上剪刻花纹，用于装点生活或配合其他民俗活动的民间艺术。在中国，剪纸具有广泛的群众基础，交融于各族人民的社会生活，是各种民俗活动的重要组成部分。其传承赓续的视觉形象和造型格式，蕴涵了丰富的文化历史信息，表达了广大民众的社会认以、道德观念、实践经验、生活理想和审美情趣，具有认知、教化、表意、抒情、娱乐、交往等多重社会价值  
+				</p>
+				<img src="images/bw-2014-06-19.jpg" class="am-img-responsive" alt=""/>
+				<p>
+					中国剪纸是一种用剪刀或刻刀在纸上剪刻花纹，用于装点生活或配合其他民俗活动的民间艺术。在中国，剪纸具有广泛的群众基础，交融于各族人民的社会生活，是各种民俗活动的重要组成部分。其传承赓续的视觉形象和造型格式，蕴涵了丰富的文化历史信息，表达了广大民众的社会认以、道德观念、实践经验、生活理想和审美情趣，具有认知、教化、表意、抒情、娱乐、交往等多重社会价值  。
+					2006年5月20日，剪纸艺术遗产经国务院批准列入第一批国家级非物质文化遗产名录 。2009年9月28日至10月2日举行的联合国教科文组织保护非物质文化遗产政府间委员会第四次会议上，中国申报的中国剪纸项目入选“人类非物质文化遗产代表作名录”  。
+				</p>
+				<img src="images/bw-2014-06-19.jpg" class="am-img-responsive" alt=""/>
+				<p>
+					中国剪纸是一种用剪刀或刻刀在纸上剪刻花纹，用于装点生活或配合其他民俗活动的民间艺术。在中国，剪纸具有广泛的群众基础，交融于各族人民的社会生活，是各种民俗活动的重要组成部分。其传承赓续的视觉形象和造型格式，蕴涵了丰富的文化历史信息，表达了广大民众的社会认以、道德观念、实践经验、生活理想和审美情趣，具有认知、教化、表意、抒情、娱乐、交往等多重社会价值  。
+					
+				</p>
+			</div>
+			<div class="am-tab-panel am-fade" id="tab2">
+				<ul class="am-comments-list am-comments-list-flip">
+					<li class="am-comment">
+						<a href="#link-to-user-home">
+							<img src="images/hwbn40x40.jpg" alt="" class="am-comment-avatar" width="48" height="48"/>
+						</a>
+
+						<div class="am-comment-main">
+							<header class="am-comment-hd">
+								<!--<h3 class="am-comment-title">评论标题</h3>-->
+								<div class="am-comment-meta">
+									<a href="#link-to-user" class="am-comment-author">某人</a>
+									评论于 <time datetime="2013-07-27T04:54:29-07:00" title="2013年7月27日 下午7:54 格林尼治标准时间+0800">2014-7-12 15:30</time>
+								</div>
+							</header>
+
+							<div class="am-comment-bd">
+								<p>
+									中国传统文化特别的棒。体验过后更是感触特别深，希望这些美好的文化不要失传。能再我们手上继续绽放光彩！！
+								</p>
+							</div>
+						</div>
+					</li>
+
+					<li class="am-comment">
+						
+					</li>
+
+
+					<li class="am-comment am-comment-flip">
+						
+					</li>
+
+					<li class="am-comment am-comment-highlight"></li>
+				</ul>
+				<article class="am-comment">
+					<a href="#link-to-user-home">
+						<img src="images/hwbn40x40.jpg" alt="" class="am-comment-avatar" width="48" height="48"/>
+					</a>
+
+					<div class="am-comment-main">
+						<header class="am-comment-hd">
+							<!--<h3 class="am-comment-title">评论标题</h3>-->
+							<div class="am-comment-meta">
+								<a href="#link-to-user" class="am-comment-author">某人</a>
+								评论于 <time datetime="2013-07-27T04:54:29-07:00" title="2013年7月27日 下午7:54 格林尼治标准时间+0800">2014-7-12 15:30</time>
+							</div>
+						</header>
+
+						<div class="am-comment-bd">
+							<p>
+								中国传统文化特别的棒。体验过后更是感触特别深，希望这些美好的文化不要失传。能再我们手上继续绽放光彩！！
+							</p>
+						</div>
+					</div>
+				</article>
+				<article class="am-comment">
+					<a href="#link-to-user-home">
+						<img src="images/hwbn40x40.jpg" alt="" class="am-comment-avatar" width="48" height="48"/>
+					</a>
+
+					<div class="am-comment-main">
+						<header class="am-comment-hd">
+							<!--<h3 class="am-comment-title">评论标题</h3>-->
+							<div class="am-comment-meta">
+								<a href="#link-to-user" class="am-comment-author">某人</a>
+								评论于 <time datetime="2013-07-27T04:54:29-07:00" title="2013年7月27日 下午7:54 格林尼治标准时间+0800">2014-7-12 15:30</time>
+							</div>
+						</header>
+
+						<div class="am-comment-bd">
+							<p>
+								中国传统文化特别的棒。体验过后更是感触特别深，希望这些美好的文化不要失传。能再我们手上继续绽放光彩！！
+							</p>
+						</div>
+					</div>
+				</article>
+				<article class="am-comment">
+					<a href="#link-to-user-home">
+						<img src="images/hwbn40x40.jpg" alt="" class="am-comment-avatar" width="48" height="48"/>
+					</a>
+
+					<div class="am-comment-main">
+						<header class="am-comment-hd">
+							<!--<h3 class="am-comment-title">评论标题</h3>-->
+							<div class="am-comment-meta">
+								<a href="#link-to-user" class="am-comment-author">某人</a>
+								评论于 <time datetime="2013-07-27T04:54:29-07:00" title="2013年7月27日 下午7:54 格林尼治标准时间+0800">2014-7-12 15:30</time>
+							</div>
+						</header>
+
+						<div class="am-comment-bd">
+							<p>
+								中国传统文化特别的棒。体验过后更是感触特别深，希望这些美好的文化不要失传。能再我们手上继续绽放光彩！！
+							</p>
+						</div>
+					</div>
+				</article>
+				<article class="am-comment">
+					<a href="#link-to-user-home">
+						<img src="images/hwbn40x40.jpg" alt="" class="am-comment-avatar" width="48" height="48"/>
+					</a>
+
+					<div class="am-comment-main">
+						<header class="am-comment-hd">
+							<!--<h3 class="am-comment-title">评论标题</h3>-->
+							<div class="am-comment-meta">
+								<a href="#link-to-user" class="am-comment-author">某人</a>
+								评论于 <time datetime="2013-07-27T04:54:29-07:00" title="2013年7月27日 下午7:54 格林尼治标准时间+0800">2014-7-12 15:30</time>
+							</div>
+						</header>
+
+						<div class="am-comment-bd">
+							<p>
+								中国传统文化特别的棒。体验过后更是感触特别深，希望这些美好的文化不要失传。能再我们手上继续绽放光彩！！
+							</p>
+						</div>
+					</div>
+				</article>
+				<article class="am-comment">
+					<a href="#link-to-user-home">
+						<img src="images/hwbn40x40.jpg" alt="" class="am-comment-avatar" width="48" height="48"/>
+					</a>
+
+					<div class="am-comment-main">
+						<header class="am-comment-hd">
+							<!--<h3 class="am-comment-title">评论标题</h3>-->
+							<div class="am-comment-meta">
+								<a href="#link-to-user" class="am-comment-author">某人</a>
+								评论于 <time datetime="2013-07-27T04:54:29-07:00" title="2013年7月27日 下午7:54 格林尼治标准时间+0800">2014-7-12 15:30</time>
+							</div>
+						</header>
+
+						<div class="am-comment-bd">
+							<p>
+								中国传统文化特别的棒。体验过后更是感触特别深，希望这些美好的文化不要失传。能再我们手上继续绽放光彩！！
+							</p>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+		<div data-am-widget="gotop" class="am-gotop am-gotop-fixed" style="width: 60px;height: 60px;right: 100px;z-index: 999;">
+			<a href="#top" title="回到顶部" class="am-icon-btn am-icon-arrow-up am-active" id="amz-go-top"></a>
+		</div>
+
+
+
+		<!-- footer -->
+		<div class="mastfoot">
+			<div class="inner">
+				<p>CopyRight by @<a href="index.html">jiangxin</a>, by @gwj.</p>
+			</div>
+		</div>
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/amazeui.min.js"></script>
+
+		<!-- Initialize Swiper -->
+		<script>
+			$(".masthead-brand").click(function(){
+			// alert("666");
+			location.href = "index.html";
+		});
+	</script>
+
+</body>
+</html>

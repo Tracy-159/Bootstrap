@@ -1,0 +1,27 @@
+.container{
+	width: 80%;
+}
+.classify{
+	position: relative;
+	left: 30px;
+	float: left;
+	color: red;
+	font-size: 2rem;
+}
+.more-button{
+	position: relative;
+	float: right;
+	right: 40px;
+}
+.more-button>a:hover{
+	color: #2C717F;
+	text-decoration: none;
+}
+.paginationbox{
+	margin-top: 50px;
+}
+.am-pagination{
+	width: 30%;
+	height: 100%;
+	margin: auto;
+}

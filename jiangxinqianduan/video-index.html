@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>所有视频</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/amazeui.css" rel="stylesheet">
+	<link href="css/header-nav.css" rel="stylesheet">
+	<link href="css/video-index.css" rel="stylesheet">
+	<link href="css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+	<!-- Header --> 	
+	<div class="masthead clearfix" style="z-index: 1;">
+		<div class="inner">
+			<img class="main-icon" src="images/jx_48x48.ico">
+			<h1 class="masthead-brand">匠心</h1>
+			<ul class="nav masthead-nav">
+				<li><a href="index.html">主页</a></li>
+				<li class=""><a href="#">匠人</a></li>
+				<li class="active"><a href="#">视频</a></li>
+				<li><a href="#">匠铺</a></li>
+				<!-- Small modal -->
+				<li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login-modal">登录</button></li>
+				<li><button type="button" class="btn btn-success" data-toggle="modal" data-target="#register-modal">注册</button></li>
+				<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<!-- 模态框里面的内容 -->
+							<div class="login-box" id="login-box">
+								<div class="login-container" style="width: inherit;">
+									<form class="form-signin">
+										<h2 class="form-signin-heading">登录</h2>
+										<label for="inputEmail" class="sr-only">用户名</label>
+										<input type="text" id="inputusername" class="form-control" placeholder="手机号/Email" required autofocus>
+										<label for="inputPassword" class="sr-only">密码</label>
+										<input type="password" id="inputPassword" class="form-control" placeholder="请输入密码" required>
+										<div class="checkbox">
+											<label class="remember-me">
+												<input type="checkbox" value="remember-me"> 记住我
+											</label>
+										</div>
+										<button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+									</form>
+								</div> 
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
+								<ul id="myTabs" class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="active" id="tab-text-regi"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true" style="color: #000;">短信注册</a></li>
+									<li role="presentation" class="" id="tab-email-regi"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false" style="color: #000;">邮箱注册</a></li>
+								</ul>
+								<div id="myTabContent" class="tab-content">
+									<div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+										<div class="register-box" id="text-register-box">
+											<div class="register-container" style="width: inherit;">
+												<form class="form-signin">
+													<h2 class="form-signin-heading">短信注册</h2>
+													<label for="inputText" class="sr-only">手机号</label>
+													<input type="text" id="inputText" class="form-control" placeholder="请输入手机号" required autofocus>
+													<br>
+													<label for="inputPassword" class="sr-only">验证码</label>
+													<input type="text" id="inputverify" class="form-control" placeholder="验证码" required>
+													<a href="#" class="btn btn-sm btn-info" id="btn-getverify">获取验证码</a>
+													<button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+												</form>
+											</div> 
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+										<div class="register-box" id="email-register-box">
+											<div class="register-container" style="width: inherit;">
+												<form class="form-signin">
+													<h2 class="form-signin-heading">Email注册</h2>
+													<label for="inputEmail" class="sr-only">Email</label>
+													<input type="email" id="inputEmail" class="form-control" placeholder="Email地址" required autofocus>
+													<br>
+													<input type="password" id="newPassword" class="form-control" placeholder="密码" required autofocus>
+													<br>
+													<input type="password" id="RetypePassword" class="form-control" placeholder="确认密码" required autofocus>
+													<br>
+													<button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+												</form>
+											</div> 
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</ul>
+		</div>
+	</div>
+	<!-- 内容 -->
+	<div class="container">
+		<!-- 第一行 -->
+		<span class="classify">
+			分类一
+		</span>
+		<span class="more-button">
+			<a href="">More</a>
+			<i class="fa fa-angle-double-right" aria-hidden="true"></i>
+		</span>
+		<hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+		<ul data-am-widget="gallery" class="am-gallery am-avg-sm-2
+		am-avg-md-3 am-avg-lg-4 am-gallery-default" data-am-gallery="{ pureview: false }" >
+			<li>
+			<div class="am-gallery-item">
+				<a href="#" class="">
+					<img src="http://s.amazeui.org/media/i/demos/bing-1.jpg"  alt="远方 有一个地方 那里种有我们的梦想"/>
+					<h3 class="am-gallery-title">远方 有一个地方 那里种有我们的梦想</h3>
+					<div class="am-gallery-desc">2375-09-26</div>
+				</a>
+			</div>
+			</li>
+			<li>
+			<div class="am-gallery-item">
+				<a href="http://s.amazeui.org/media/i/demos/bing-2.jpg" class="">
+					<img src="http://s.amazeui.org/media/i/demos/bing-2.jpg"  alt="某天 也许会相遇 相遇在这个好地方"/>
+					<h3 class="am-gallery-title">某天 也许会相遇 相遇在这个好地方</h3>
+					<div class="am-gallery-desc">2375-09-26</div>
+				</a>
+			</div>
+			</li>
+			<li>
+			<div class="am-gallery-item">
+				<a href="http://s.amazeui.org/media/i/demos/bing-3.jpg" class="">
+					<img src="http://s.amazeui.org/media/i/demos/bing-3.jpg"  alt="不要太担心 只因为我相信"/>
+					<h3 class="am-gallery-title">不要太担心 只因为我相信</h3>
+					<div class="am-gallery-desc">2375-09-26</div>
+				</a>
+			</div>
+			</li>
+			<li>
+			<div class="am-gallery-item">
+				<a href="http://s.amazeui.org/media/i/demos/bing-4.jpg" class="">
+					<img src="http://s.amazeui.org/media/i/demos/bing-4.jpg"  alt="终会走过这条遥远的道路"/>
+					<h3 class="am-gallery-title">终会走过这条遥远的道路</h3>
+					<div class="am-gallery-desc">2375-09-26</div>
+				</a>
+			</div>
+			</li>
+		</ul>
+		<!-- 第二行 -->
+		<span class="classify">
+			分类二
+		</span>
+		<hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+		<ul data-am-widget="gallery" class="am-gallery am-avg-sm-2
+		am-avg-md-3 am-avg-lg-4 am-gallery-default" data-am-gallery="{ pureview: true }" >
+			<li>
+			<div class="am-gallery-item">
+				<a href="http://s.amazeui.org/media/i/demos/bing-1.jpg" class="">
+					<img src="http://s.amazeui.org/media/i/demos/bing-1.jpg"  alt="远方 有一个地方 那里种有我们的梦想"/>
+					<h3 class="am-gallery-title">远方 有一个地方 那里种有我们的梦想</h3>
+					<div class="am-gallery-desc">2375-09-26</div>
+				</a>
+			</div>
+			</li>
+			<li>
+			<div class="am-gallery-item">
+				<a href="http://s.amazeui.org/media/i/demos/bing-2.jpg" class="">
+					<img src="http://s.amazeui.org/media/i/demos/bing-2.jpg"  alt="某天 也许会相遇 相遇在这个好地方"/>
+					<h3 class="am-gallery-title">某天 也许会相遇 相遇在这个好地方</h3>
+					<div class="am-gallery-desc">2375-09-26</div>
+				</a>
+			</div>
+			</li>
+			<li>
+			<div class="am-gallery-item">
+				<a href="http://s.amazeui.org/media/i/demos/bing-3.jpg" class="">
+					<img src="http://s.amazeui.org/media/i/demos/bing-3.jpg"  alt="不要太担心 只因为我相信"/>
+					<h3 class="am-gallery-title">不要太担心 只因为我相信</h3>
+					<div class="am-gallery-desc">2375-09-26</div>
+				</a>
+			</div>
+			</li>
+			<li>
+			<div class="am-gallery-item">
+				<a href="http://s.amazeui.org/media/i/demos/bing-4.jpg" class="">
+					<img src="http://s.amazeui.org/media/i/demos/bing-4.jpg"  alt="终会走过这条遥远的道路"/>
+					<h3 class="am-gallery-title">终会走过这条遥远的道路</h3>
+					<div class="am-gallery-desc">2375-09-26</div>
+				</a>
+			</div>
+			</li>
+		</ul>
+		<!-- 第三行 -->
+		<span class="classify">
+			分类三
+		</span>
+		<hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+		<ul data-am-widget="gallery" class="am-gallery am-avg-sm-2
+		am-avg-md-3 am-avg-lg-4 am-gallery-default" data-am-gallery="{ pureview: true }" >
+			<li>
+			<div class="am-gallery-item">
+				<a href="http://s.amazeui.org/media/i/demos/bing-1.jpg" class="">
+					<img src="http://s.amazeui.org/media/i/demos/bing-1.jpg"  alt="远方 有一个地方 那里种有我们的梦想"/>
+					<h3 class="am-gallery-title">远方 有一个地方 那里种有我们的梦想</h3>
+					<div class="am-gallery-desc">2375-09-26</div>
+				</a>
+			</div>
+			</li>
+			<li>
+			<div class="am-gallery-item">
+				<a href="http://s.amazeui.org/media/i/demos/bing-2.jpg" class="">
+					<img src="http://s.amazeui.org/media/i/demos/bing-2.jpg"  alt="某天 也许会相遇 相遇在这个好地方"/>
+					<h3 class="am-gallery-title">某天 也许会相遇 相遇在这个好地方</h3>
+					<div class="am-gallery-desc">2375-09-26</div>
+				</a>
+			</div>
+			</li>
+			<li>
+			<div class="am-gallery-item">
+				<a href="http://s.amazeui.org/media/i/demos/bing-3.jpg" class="">
+					<img src="http://s.amazeui.org/media/i/demos/bing-3.jpg"  alt="不要太担心 只因为我相信"/>
+					<h3 class="am-gallery-title">不要太担心 只因为我相信</h3>
+					<div class="am-gallery-desc">2375-09-26</div>
+				</a>
+			</div>
+			</li>
+			<li>
+			<div class="am-gallery-item">
+				<a href="http://s.amazeui.org/media/i/demos/bing-4.jpg" class="">
+					<img src="http://s.amazeui.org/media/i/demos/bing-4.jpg"  alt="终会走过这条遥远的道路"/>
+					<h3 class="am-gallery-title">终会走过这条遥远的道路</h3>
+					<div class="am-gallery-desc">2375-09-26</div>
+				</a>
+			</div>
+			</li>
+		</ul>
+		<!-- 第四行 -->
+		<span class="classify">
+			分类四
+		</span>
+		<hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+		<ul data-am-widget="gallery" class="am-gallery am-avg-sm-2
+		am-avg-md-3 am-avg-lg-4 am-gallery-default" data-am-gallery="{ pureview: true }" >
+			<li>
+			<div class="am-gallery-item">
+				<a href="http://s.amazeui.org/media/i/demos/bing-1.jpg" class="">
+					<img src="http://s.amazeui.org/media/i/demos/bing-1.jpg"  alt="远方 有一个地方 那里种有我们的梦想"/>
+					<h3 class="am-gallery-title">远方 有一个地方 那里种有我们的梦想</h3>
+					<div class="am-gallery-desc">2375-09-26</div>
+				</a>
+			</div>
+			</li>
+			<li>
+			<div class="am-gallery-item">
+				<a href="http://s.amazeui.org/media/i/demos/bing-2.jpg" class="">
+					<img src="http://s.amazeui.org/media/i/demos/bing-2.jpg"  alt="某天 也许会相遇 相遇在这个好地方"/>
+					<h3 class="am-gallery-title">某天 也许会相遇 相遇在这个好地方</h3>
+					<div class="am-gallery-desc">2375-09-26</div>
+				</a>
+			</div>
+			</li>
+			<li>
+			<div class="am-gallery-item">
+				<a href="http://s.amazeui.org/media/i/demos/bing-3.jpg" class="">
+					<img src="http://s.amazeui.org/media/i/demos/bing-3.jpg"  alt="不要太担心 只因为我相信"/>
+					<h3 class="am-gallery-title">不要太担心 只因为我相信</h3>
+					<div class="am-gallery-desc">2375-09-26</div>
+				</a>
+			</div>
+			</li>
+			<li>
+			<div class="am-gallery-item">
+				<a href="http://s.amazeui.org/media/i/demos/bing-4.jpg" class="">
+					<img src="http://s.amazeui.org/media/i/demos/bing-4.jpg"  alt="终会走过这条遥远的道路"/>
+					<h3 class="am-gallery-title">终会走过这条遥远的道路</h3>
+					<div class="am-gallery-desc">2375-09-26</div>
+				</a>
+			</div>
+			</li>
+		</ul>
+		<!-- 第五行 -->
+		<span class="classify">
+			分类五
+		</span>
+		<hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+		<ul data-am-widget="gallery" class="am-gallery am-avg-sm-2
+		am-avg-md-3 am-avg-lg-4 am-gallery-default" data-am-gallery="{ pureview: true }" >
+			<li>
+			<div class="am-gallery-item">
+				<a href="http://s.amazeui.org/media/i/demos/bing-1.jpg" class="">
+					<img src="http://s.amazeui.org/media/i/demos/bing-1.jpg"  alt="远方 有一个地方 那里种有我们的梦想"/>
+					<h3 class="am-gallery-title">远方 有一个地方 那里种有我们的梦想</h3>
+					<div class="am-gallery-desc">2375-09-26</div>
+				</a>
+			</div>
+			</li>
+			<li>
+			<div class="am-gallery-item">
+				<a href="http://s.amazeui.org/media/i/demos/bing-2.jpg" class="">
+					<img src="http://s.amazeui.org/media/i/demos/bing-2.jpg"  alt="某天 也许会相遇 相遇在这个好地方"/>
+					<h3 class="am-gallery-title">某天 也许会相遇 相遇在这个好地方</h3>
+					<div class="am-gallery-desc">2375-09-26</div>
+				</a>
+			</div>
+			</li>
+			<li>
+			<div class="am-gallery-item">
+				<a href="http://s.amazeui.org/media/i/demos/bing-3.jpg" class="">
+					<img src="http://s.amazeui.org/media/i/demos/bing-3.jpg"  alt="不要太担心 只因为我相信"/>
+					<h3 class="am-gallery-title">不要太担心 只因为我相信</h3>
+					<div class="am-gallery-desc">2375-09-26</div>
+				</a>
+			</div>
+			</li>
+			<li>
+			<div class="am-gallery-item">
+				<a href="http://s.amazeui.org/media/i/demos/bing-4.jpg" class="">
+					<img src="http://s.amazeui.org/media/i/demos/bing-4.jpg"  alt="终会走过这条遥远的道路"/>
+					<h3 class="am-gallery-title">终会走过这条遥远的道路</h3>
+					<div class="am-gallery-desc">2375-09-26</div>
+				</a>
+			</div>
+			</li>
+		</ul>
+	</div>
+	<div class="paginationbox">
+		  <ul data-am-widget="pagination"
+      class="am-pagination am-pagination-select"
+      >
+
+
+      <li class="am-pagination-prev ">
+        <a href="#" class="">上一页</a>
+      </li>
+
+
+        <li class="am-pagination-select">
+          <select>
+              <option value="#" class="">1
+                / 
+              </option>
+              <option value="#" class="">2
+                / 
+              </option>
+              <option value="#" class="">3
+                / 
+              </option>
+          </select>
+        </li>
+
+
+      <li class="am-pagination-next ">
+        <a href="#" class="">下一页</a>
+      </li>
+
+  </ul>
+
+	</div>
+
+	<!-- footer -->
+	<div class="mastfoot">
+		<div class="inner">
+			<p>CopyRight by @<a href="index.html">jiangxin</a>, by @gwj.</p>
+		</div>
+	</div>
+<!-- 回到顶部 -->
+<div data-am-widget="gotop" class="am-gotop am-gotop-fixed" style="width: 100px;height: 100px;right: 60px;">
+	<a href="#top" title="回到顶部" class="am-icon-btn am-icon-arrow-up am-active" id="amz-go-top"></a>
+</div>
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+</body>
+</html>

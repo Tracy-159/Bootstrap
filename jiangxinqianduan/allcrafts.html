@@ -1,0 +1,371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>所有艺术品</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/header-nav.css" rel="stylesheet">
+	<link href="css/amazeui.css" rel="stylesheet" type="text/css" />
+	<link href="css/admin.css" rel="stylesheet" type="text/css" />
+	<link href="css/demo.css" rel="stylesheet" type="text/css" />
+	<link href="css/seastyle.css" rel="stylesheet" type="text/css" />
+
+	<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+	<div class="masthead clearfix" style="z-index: 1;">
+		<div class="inner">
+			<img class="main-icon" src="images/jx_48x48.ico" style=" position: absolute;
+			left: 15px;">
+			<h1 class="masthead-brand" style="font-size: 3em;">匠心</h1>
+			<ul class="nav masthead-nav">
+				<li><a href="index.html">主页</a></li>
+				<li><a href="#">匠人</a></li>
+				<li><a href="#">视频</a></li>
+				<li class="active"><a href="#">匠铺</a></li>
+				<!-- Small modal -->
+				<li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login-modal">登录</button></li>
+				<li><button type="button" class="btn btn-success" data-toggle="modal" data-target="#register-modal">注册</button></li>
+				<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<!-- 模态框里面的内容 -->
+							<div class="login-box" id="login-box">
+								<div class="login-container" style="width: inherit;">
+									<form class="form-signin">
+										<h2 class="form-signin-heading">登录</h2>
+										<label for="inputEmail" class="sr-only">用户名</label>
+										<input type="text" id="inputusername" class="form-control" placeholder="手机号/Email" required autofocus>
+										<label for="inputPassword" class="sr-only">密码</label>
+										<input type="password" id="inputPassword" class="form-control" placeholder="请输入密码" required>
+										<div class="checkbox">
+											<label class="remember-me">
+												<input type="checkbox" value="remember-me"> 记住我
+											</label>
+										</div>
+										<button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+									</form>
+								</div> 
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
+								<ul id="myTabs" class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="active" id="tab-text-regi"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true" style="color: #000;">短信注册</a></li>
+									<li role="presentation" class="" id="tab-email-regi"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false" style="color: #000;">邮箱注册</a></li>
+								</ul>
+								<div id="myTabContent" class="tab-content">
+									<div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+										<div class="register-box" id="text-register-box">
+											<div class="register-container" style="width: inherit;">
+												<form class="form-signin">
+													<h2 class="form-signin-heading">短信注册</h2>
+													<label for="inputText" class="sr-only">手机号</label>
+													<input type="text" id="inputText" class="form-control" placeholder="请输入手机号" required autofocus>
+													<br>
+													<label for="inputPassword" class="sr-only">验证码</label>
+													<input type="text" id="inputverify" class="form-control" placeholder="验证码" required>
+													<a href="#" class="btn btn-sm btn-info" id="btn-getverify">获取验证码</a>
+													<button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+												</form>
+											</div> 
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+										<div class="register-box" id="email-register-box">
+											<div class="register-container" style="width: inherit;">
+												<form class="form-signin">
+													<h2 class="form-signin-heading">Email注册</h2>
+													<label for="inputEmail" class="sr-only">Email</label>
+													<input type="email" id="inputEmail" class="form-control" placeholder="Email地址" required autofocus>
+													<br>
+													<input type="password" id="newPassword" class="form-control" placeholder="密码" required autofocus>
+													<br>
+													<input type="password" id="RetypePassword" class="form-control" placeholder="确认密码" required autofocus>
+													<br>
+													<button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+												</form>
+											</div> 
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</ul>
+		</div>
+	</div>
+
+	<div class="search">
+		<div class="search-list">
+			<div class="am-g am-g-fixed">
+				<div class="am-u-sm-12 am-u-md-12">
+					<div class="search-content">
+						<div class="clear"></div>
+						<ul class="am-avg-sm-2 am-avg-md-3 am-avg-lg-4 boxes">
+							<li>
+								<div class="i-pic limit">
+									<img src="images/剪纸1.jpg"  style="width:200px;height: 200px;" />	
+									<p class="title fl">上山虎香台</p>
+									<p class="price fl">
+										<b>¥</b>
+										<strong>980.00</strong>
+									</p>
+									<p class="number fl">
+										销量<span>100+</span>
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="i-pic limit">
+
+									<img src="images/1-15.jpg" />
+									<p class="title fl">上山虎香台</p>
+									<p class="price fl">
+										<b>¥</b>
+										<strong>980.00</strong>
+									</p>
+									<p class="number fl">
+										销量<span>100+</span>
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="i-pic limit">
+
+									<img src="images/1-15.jpg" />
+									<p class="title fl">上山虎香台</p>
+									<p class="price fl">
+										<b>¥</b>
+										<strong>980.00</strong>
+									</p>
+									<p class="number fl">
+										销量<span>100+</span>
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="i-pic limit">
+
+									<img src="images/1-15.jpg" />
+									<p class="title fl">上山虎香台</p>
+									<p class="price fl">
+										<b>¥</b>
+										<strong>980.00</strong>
+									</p>
+									<p class="number fl">
+										销量<span>100+</span>
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="i-pic limit">
+
+									<img src="images/1-15.jpg" />
+									<p class="title fl">上山虎香台</p>
+									<p class="price fl">
+										<b>¥</b>
+										<strong>980.00</strong>
+									</p>
+									<p class="number fl">
+										销量<span>100+</span>
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="i-pic limit">
+
+									<img src="images/1-15.jpg" />
+									<p class="title fl">上山虎香台</p>
+									<p class="price fl">
+										<b>¥</b>
+										<strong>980.00</strong>
+									</p>
+									<p class="number fl">
+										销量<span>100+</span>
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="i-pic limit">
+
+									<img src="images/1-15.jpg" />
+									<p class="title fl">上山虎香台</p>
+									<p class="price fl">
+										<b>¥</b>
+										<strong>980.00</strong>
+									</p>
+									<p class="number fl">
+										销量<span>100+</span>
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="i-pic limit">
+
+									<img src="images/1-15.jpg" />
+									<p class="title fl">上山虎香台</p>
+									<p class="price fl">
+										<b>¥</b>
+										<strong>980.00</strong>
+									</p>
+									<p class="number fl">
+										销量<span>100+</span>
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="i-pic limit">
+
+									<img src="images/1-15.jpg" />
+									<p class="title fl">上山虎香台</p>
+									<p class="price fl">
+										<b>¥</b>
+										<strong>980.00</strong>
+									</p>
+									<p class="number fl">
+										销量<span>100+</span>
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="i-pic limit">
+
+									<img src="images/1-15.jpg" />
+									<p class="title fl">上山虎香台</p>
+									<p class="price fl">
+										<b>¥</b>
+										<strong>980.00</strong>
+									</p>
+									<p class="number fl">
+										销量<span>100+</span>
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="i-pic limit">
+
+									<img src="images/1-15.jpg" />
+									<p class="title fl">上山虎香台</p>
+									<p class="price fl">
+										<b>¥</b>
+										<strong>980.00</strong>
+									</p>
+									<p class="number fl">
+										销量<span>100+</span>
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="i-pic limit">
+
+									<img src="images/1-15.jpg" />
+									<p class="title fl">上山虎香台</p>
+									<p class="price fl">
+										<b>¥</b>
+										<strong>980.00</strong>
+									</p>
+									<p class="number fl">
+										销量<span>100+</span>
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="search-side">
+
+						<div class="side-title">
+							推荐
+						</div>
+
+						<li>
+							<div class="i-pic check">
+								<img src="images/120160218112856.jpg" />
+								<p class="check-title">发财紫砂壶</p>
+								<p class="price fl">
+									<b>¥</b>
+									<strong>29.90</strong>
+								</p>
+								<p class="number fl">
+									销量<span>100+</span>
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="i-pic check">
+								<img src="images/120160218112856.jpg" />
+								<p class="check-title">发财紫砂壶</p>
+								<p class="price fl">
+									<b>¥</b>
+									<strong>8.90</strong>
+								</p>
+								<p class="number fl">
+									销量<span>100+</span>
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="i-pic check">
+								<img src="images/120160218112856.jpg" />
+								<p class="check-title">发财紫砂壶</p>
+								<p class="price fl">
+									<b>¥</b>
+									<strong>29.90</strong>
+								</p>
+								<p class="number fl">
+									销量<span>100+</span>
+								</p>
+							</div>
+						</li>
+
+					</div>
+					<div class="clear"></div>
+					<!--分页 -->
+					<ul class="am-pagination am-pagination-right">
+						<li class="am-disabled"><a href="#">&laquo;</a></li>
+						<li class="am-active"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">&raquo;</a></li>
+					</ul>
+
+				</div>
+			</div>
+			<div class="footer">
+				<div class="footer-hd">
+				</div>
+				<div class="footer-bd">
+					<p>
+						<a href="#">合作伙伴</a>
+						<a href="#">活动举办</a>
+						<a href="#">加入我们</a>
+						<a href="#">联系我们</a>
+					</p>
+					<p style="text-align: center;">CopyRight by @<a href="index.html">jiangxin</a>, by @gwj.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		window.jQuery || document.write('<script src="js/jquery-1.9.min.js"><\/script>');
+	</script>
+	<script type="text/javascript" src="js/quick_links.js"></script>
+
+	<div class="theme-popover-mask"></div>
+
+</body>
+
+</html>
